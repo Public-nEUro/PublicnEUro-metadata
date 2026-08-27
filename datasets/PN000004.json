@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000004",
+  "name": "Closed Loop Sleep Motor Memory",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000004%20Closed%20Loop%20Sleep%20Motor%20Memory/V1",
+      "description": "Unraveling the Neurophysiological Correlates of Phase-Specific Enhancement of Motor Memory Consolidation via Slow-Wave Closed-Loop Targeted Memory Reactivation (total size: 81.0GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000004"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000004 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "Closed Loop Sleep Motor Memory",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000004%20Closed%20Loop%20Sleep%20Motor%20Memory/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/QXBH2876"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "Regulatory jurisdiction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory compliance"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "User authentication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Re-identification"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data redistribution"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Publication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          }
+        ],
+        "creationDate": "2025-02-15",
+        "lastUpdated": "2025-02-15"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "Data User Agreement",
+          "url": "https://datacatalog.publicneuro.eu/dataset/PN000004%20Closed%20Loop%20Sleep%20Motor%20Memory/V1",
+          "authoritative": true,
+          "sha256": "76e5a939cfdf7355339311a699271cb169e5797e3f5b33f6524d24b17676fc5e"
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-JURISDICTION-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 1,
+            "mappingRule": "PN-DUC-LAW-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 2,
+            "mappingRule": "PN-DUC-AUTH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 3,
+            "mappingRule": "PN-DUC-REID-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 4,
+            "mappingRule": "PN-DUC-REDISTRIBUTE-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 5,
+            "mappingRule": "PN-DUC-PUBLICATION-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/QXBH2876",
+      "lastUpdated": "2025-02-15",
+      "creators": [
+        {
+          "givenName": "Judith",
+          "familyName": "Nicolas"
+        },
+        {
+          "givenName": "Gaëlle",
+          "familyName": "Leroux"
+        }
+      ],
+      "keywords": [
+        "sleep",
+        "motor learning"
+      ]
+    }
+  ]
+}

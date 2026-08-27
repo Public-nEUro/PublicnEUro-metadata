@@ -1,0 +1,183 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000008",
+  "name": "Leuven PET UCB-J dataset 4 in control participants",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000008%20Leuven%20PET%20UCB-J%20dataset%204%20in%20control%20participants/V1",
+      "description": "Test-retest in healthy volunteers: dynamic UCB-J PET baseline scan (60 - 90 min after injection), dynamic PE2I PET baseline scan (50 - 70 min after injection), T1w  (total size: 1.8GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000008"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000008 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "Leuven PET UCB-J dataset 4 in control participants",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000008%20Leuven%20PET%20UCB-J%20dataset%204%20in%20control%20participants/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/MIIQ4096"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "Regulatory jurisdiction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Data controller oversight"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory compliance"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "User authentication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Re-identification"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data redistribution"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Publication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          }
+        ],
+        "creationDate": "2025-09-22",
+        "lastUpdated": "2025-09-22"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "Data User Agreement",
+          "url": "https://datacatalog.publicneuro.eu/dataset/PN000008%20Leuven%20PET%20UCB-J%20dataset%204%20in%20control%20participants/V1",
+          "authoritative": true,
+          "sha256": "1787d8bc76c4b52e8fc82b414103e38a9b8c579deed4ca9ab4d751ab6e1bf3ee"
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-JURISDICTION-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 1,
+            "mappingRule": "PN-DUC-CONTROLLER-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 2,
+            "mappingRule": "PN-DUC-LAW-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 3,
+            "mappingRule": "PN-DUC-AUTH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 4,
+            "mappingRule": "PN-DUC-REID-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 5,
+            "mappingRule": "PN-DUC-REDISTRIBUTE-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 6,
+            "mappingRule": "PN-DUC-PUBLICATION-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/MIIQ4096",
+      "lastUpdated": "2025-09-22",
+      "creators": [
+        {
+          "givenName": "Koen",
+          "familyName": "Van Laere"
+        },
+        {
+          "givenName": "Aline",
+          "familyName": "Delva"
+        },
+        {
+          "givenName": "Wim",
+          "familyName": "Vandenberghe"
+        }
+      ],
+      "keywords": [
+        "UCBJ",
+        "PE2I",
+        "PET",
+        "T1w",
+        "SV2A",
+        "11C",
+        "dynamic"
+      ]
+    }
+  ]
+}

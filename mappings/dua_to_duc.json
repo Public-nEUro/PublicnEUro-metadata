@@ -1,0 +1,106 @@
+{
+  "mappingVersion": "1.0",
+  "permissionMode": "All unstated conditions are Permitted",
+  "rules": [
+    {
+      "id": "PN-DUC-RESEARCH-001",
+      "patterns": ["medical and cognitive neuroscience\\s+research", "research purposes?"],
+      "conditionTerm": {"label": "General research use"},
+      "rule": "Permitted",
+      "scope": "Whole of asset"
+    },
+    {
+      "id": "PN-DUC-JURISDICTION-001",
+      "patterns": ["standard contractual clauses"],
+      "conditionTerm": {"label": "Regulatory jurisdiction"},
+      "rule": "Obligatory",
+      "scope": "Whole of asset",
+      "conditionParameter": {
+        "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+      }
+    },
+    {
+      "id": "PN-DUC-CONTROLLER-001",
+      "patterns": ["data controller oversight"],
+      "conditionTerm": {"label": "Data controller oversight"},
+      "rule": "Obligatory",
+      "scope": "Whole of asset"
+    },
+    {
+      "id": "PN-DUC-LAW-001",
+      "patterns": ["comply with all (?:applicable|relevant) (?:laws|rules and regulations)", "act as data controller in accordance (?:to|with) .*gdpr"],
+      "conditionTerm": {"label": "Regulatory compliance"},
+      "rule": "Obligatory",
+      "scope": "Whole of asset"
+    },
+    {
+      "id": "PN-DUC-AUTH-001",
+      "patterns": ["restrict access .*employee researchers", "independently applied and been granted access", "prevent unauthorized access"],
+      "conditionTerm": {"label": "User authentication"},
+      "rule": "Obligatory",
+      "scope": "Whole of asset"
+    },
+    {
+      "id": "PN-DUC-CONFIDENTIAL-001",
+      "patterns": ["treat the data as confidential information", "keep .*data confidential"],
+      "conditionTerm": {"label": "Confidentiality"},
+      "rule": "Obligatory",
+      "scope": "Whole of asset"
+    },
+    {
+      "id": "PN-DUC-SECURITY-001",
+      "patterns": ["safe custody", "prevent unauthorized access"],
+      "conditionTerm": {"label": "Data security"},
+      "rule": "Obligatory",
+      "scope": "Whole of asset"
+    },
+    {
+      "id": "PN-DUC-REID-001",
+      "patterns": ["(?:not|under no circumstances) attempt to (?:establish|retrieve|re-identify)", "not link (?:these |the )?data .*identifying information", "not attempt to re-identify"],
+      "conditionTerm": {"label": "Re-identification"},
+      "rule": "Forbidden",
+      "scope": "Whole of asset"
+    },
+    {
+      "id": "PN-DUC-REDISTRIBUTE-001",
+      "patterns": ["not redistribute (?:these |the )?data", "must not transfer, sell, disseminate, disclose or otherwise distribute", "not .*share access .*with others"],
+      "conditionTerm": {"label": "Data redistribution"},
+      "rule": "Forbidden",
+      "scope": "Whole of asset"
+    },
+    {
+      "id": "PN-DUC-DERIVATIVE-001",
+      "patterns": ["sharing secondary or derivative data .*group level"],
+      "conditionTerm": {"label": "Derived data sharing"},
+      "rule": "Permitted",
+      "scope": "Whole of asset",
+      "conditionParameter": {
+        "label": "Only group-level outputs from which individual participant information cannot be deduced"
+      }
+    },
+    {
+      "id": "PN-DUC-COMMERCIAL-001",
+      "patterns": ["must not use the data for any profit-making or commercial purposes without written approval", "not use .*commercial purposes without .*approval"],
+      "conditionTerm": {"label": "Profit-motivated use"},
+      "rule": "Forbidden",
+      "scope": "Whole of asset",
+      "conditionParameter": {
+        "label": "Unless written approval is obtained from the transferring data controller"
+      }
+    },
+    {
+      "id": "PN-DUC-PUBLICATION-001",
+      "patterns": ["reference the specific source", "should cite relevant publications", "acknowledge the origin of the data", "citation of the dataset"],
+      "conditionTerm": {"label": "Publication"},
+      "rule": "Obligatory",
+      "scope": "Whole of asset"
+    },
+    {
+      "id": "PN-DUC-DESTROY-001",
+      "patterns": ["delete .*data", "destroy .*data"],
+      "conditionTerm": {"label": "Data destruction"},
+      "rule": "Obligatory",
+      "scope": "Whole of asset"
+    }
+  ]
+}

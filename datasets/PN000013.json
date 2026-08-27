@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000013",
+  "name": "Aarhus University (PACE) UCBJ cohort ",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000013%20Aarhus%20University%20%28PACE%29%20UCBJ%20cohort/V1",
+      "description": "Multimodal neuroimaging dataset from the Aarhus University UCB-J project including T1-weighted MRI, [11C]UCB-J PET, and FDG PET. The dataset includes healthy controls (young and older) and patients with Parkinson’s disease spectrum disorders (PD, DLB, PDD), organized in BIDS format. (total size: 2.63 GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000013"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000013 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "Aarhus University (PACE) UCBJ cohort ",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000013%20Aarhus%20University%20%28PACE%29%20UCBJ%20cohort/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/PPNJ4476"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "General research use"
+            },
+            "rule": "Permitted",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory jurisdiction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Data controller oversight"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Confidentiality"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data destruction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          }
+        ],
+        "lastUpdated": "2022-03-01"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "Data User Agreement",
+          "url": "https://datacatalog.publicneuro.eu/dataset/PN000013%20Aarhus%20University%20%28PACE%29%20UCBJ%20cohort/V1",
+          "authoritative": true,
+          "sha256": "af308811dbded4d152a9f4873efdf5250608ad19872991c5de56085232b4beaa"
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-RESEARCH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 1,
+            "mappingRule": "PN-DUC-JURISDICTION-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 2,
+            "mappingRule": "PN-DUC-CONTROLLER-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 3,
+            "mappingRule": "PN-DUC-CONFIDENTIAL-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 4,
+            "mappingRule": "PN-DUC-DESTROY-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/PPNJ4476",
+      "lastUpdated": "2022-03-01",
+      "creators": [
+        {
+          "givenName": "Katrine",
+          "familyName": "B. Andersen"
+        },
+        {
+          "givenName": "Per",
+          "familyName": "Borghammer"
+        }
+      ],
+      "keywords": [
+        "Parkinson's disease",
+        "dementia with Lewy bodies",
+        "Parkinson's disease dementia",
+        "PET",
+        "[11C]UCB-J",
+        "FDG PET",
+        "MRI",
+        "T1-weighted MRI",
+        "synaptic density",
+        "glucose metabolism",
+        "healthy controls",
+        "aging"
+      ]
+    }
+  ]
+}

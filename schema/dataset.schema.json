@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Public-nEUro/PublicnEUro-metadata/raw/main/schema/dataset.schema.json",
+  "title": "PublicnEUro dataset governance metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "datasetId", "name", "versions"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "datasetId": {"pattern": "^PN[0-9]{6}$"},
+    "name": {"type": "string", "minLength": 1},
+    "versions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/version"}
+    }
+  },
+  "$defs": {
+    "version": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "status", "statusSource", "retrieval", "duc", "ducProvenance", "catalogueUrl", "description"],
+      "properties": {
+        "version": {"pattern": "^V[0-9]+$"},
+        "doi": {"type": "string", "format": "uri"},
+        "catalogueUrl": {"type": "string", "format": "uri"},
+        "description": {"type": "string"},
+        "lastUpdated": {"type": "string", "format": "date"},
+        "status": {"enum": ["active", "archived", "retired", "withdrawn", "superseded"]},
+        "statusSource": {"enum": ["catalogue", "inferred-default"]},
+        "retrieval": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode"],
+          "properties": {
+            "mode": {"enum": ["online", "cold_archive", "external", "unavailable"]},
+            "url": {"type": "string"},
+            "contact": {"type": "string"}
+          }
+        },
+        "duc": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["profileVersion", "profileName", "ducVersion", "permissionMode", "language", "assets", "conditions"],
+          "properties": {
+            "profileVersion": {"type": "string"},
+            "profileName": {"type": "string"},
+            "ducVersion": {"type": "string"},
+            "creationDate": {"type": "string", "format": "date"},
+            "lastUpdated": {"type": "string", "format": "date"},
+            "permissionMode": {"const": "All unstated conditions are Permitted"},
+            "language": {"const": "eng"},
+            "assets": {
+              "type": "array",
+              "minItems": 1,
+              "items": {"$ref": "#/$defs/asset"}
+            },
+            "conditions": {
+              "type": "array",
+              "minItems": 1,
+              "items": {"$ref": "#/$defs/condition"}
+            }
+          }
+        },
+        "ducProvenance": {"$ref": "#/$defs/ducProvenance"},
+        "creators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["familyName"],
+            "properties": {
+              "givenName": {"type": "string"},
+              "familyName": {"type": "string"}
+            }
+          }
+        },
+        "keywords": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["conditionTerm", "rule", "scope"],
+      "properties": {
+        "conditionTerm": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["label"],
+          "properties": {
+            "label": {"type": "string"},
+            "uri": {"type": "string", "format": "uri"}
+          }
+        },
+        "rule": {"enum": ["Permitted", "Obligatory", "Forbidden", "No Requirement"]},
+        "scope": {"enum": ["Whole of asset", "Part of asset"]},
+        "conditionParameter": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "label": {"type": "string"},
+            "uri": {"type": "string", "format": "uri"},
+            "value": {}
+          }
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetName"],
+      "properties": {
+        "assetName": {"type": "string"},
+        "assetDescription": {"type": "string"},
+        "assetReferences": {
+          "type": "array",
+          "items": {"type": "string", "format": "uri"}
+        },
+        "assetURI": {"type": "string", "format": "uri"}
+      }
+    },
+    "ducProvenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mappingVersion", "mappingStatus", "sourceAgreement", "conditionEvidence"],
+      "properties": {
+        "mappingVersion": {"type": "string"},
+        "mappingStatus": {"enum": ["machine-generated-unreviewed", "human-reviewed"]},
+        "sourceAgreement": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "url", "authoritative"],
+          "properties": {
+            "type": {"type": "string"},
+            "url": {"type": "string", "format": "uri"},
+            "authoritative": {"const": true},
+            "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          }
+        },
+        "conditionEvidence": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/conditionEvidence"}
+        }
+      }
+    },
+    "conditionEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["conditionIndex", "mappingRule", "sourceSections", "confidence"],
+      "properties": {
+        "conditionIndex": {"type": "integer", "minimum": 0},
+        "mappingRule": {"pattern": "^PN-DUC-[A-Z0-9-]+$"},
+        "sourceSections": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"enum": ["restrictions", "terms", "license"]}
+        },
+        "confidence": {"enum": ["deterministic-pattern", "deterministic-license", "human-reviewed"]}
+      }
+    }
+  }
+}

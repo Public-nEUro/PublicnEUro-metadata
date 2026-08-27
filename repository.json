@@ -1,0 +1,26 @@
+{
+  "name": "PublicnEUro",
+  "url": "https://publicneuro.eu/",
+  "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/super/V1",
+  "description": "PublicnEUro is a repository for discoverable, citable and governed sharing of human neuroimaging datasets.",
+  "repositoryType": "disciplinary",
+  "repositoryLanguage": "eng",
+  "subject": {
+    "scheme": "DFG",
+    "id": "22308",
+    "name": "Human Cognitive and Systems Neuroscience"
+  },
+  "providerType": "dataProvider",
+  "institution": {
+    "name": "Neurobiology Research Unit, Copenhagen University Hospital - Rigshospitalet",
+    "country": "DNK",
+    "responsibility": "general",
+    "type": "non-profit",
+    "url": "https://nru.dk/"
+  },
+  "metadataLicense": {
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "entryDate": "2024-06-02"
+}

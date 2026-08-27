@@ -1,0 +1,217 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000001",
+  "name": "OpenNeuroPET Phantoms",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000001%20OpenNeuroPET%20Phantoms/V1",
+      "description": "The PET Brain phantoms dataset is curated by OpenNeuroPET. This repository contains source data from PET scanners that need to be converted to nifti format, preferably following BIDS. An issue with ecat and DICOM data is that many tags are not mandatory and many values are not standardized making it difficult to harmonize the outputs of conversion, in particular side car json files. Here we collected many phantoms from different sites and scanners allowing to check the different header tags and values. This also allows validated conversion tools. Such test is performed via the code folder where one use the PET2BIDS library to do the conversion (which depends on dcm2niix for DICOM). Feel free to contact OpenNeuroPET to add your data from a scanner we have not tested. (total size: 0.6GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000001"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000001 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "OpenNeuroPET Phantoms",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000001%20OpenNeuroPET%20Phantoms/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/IGQP1334"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "Attribution"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          }
+        ],
+        "creationDate": "2024-06-02",
+        "lastUpdated": "2024-06-02"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "authoritative": true
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-CCBY-001",
+            "sourceSections": [
+              "license"
+            ],
+            "confidence": "deterministic-license"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/IGQP1334",
+      "lastUpdated": "2024-06-02",
+      "creators": [
+        {
+          "givenName": "Søren",
+          "familyName": "Baarsgaard Hansen"
+        },
+        {
+          "givenName": "Murat",
+          "familyName": "Bilgel"
+        },
+        {
+          "givenName": "Keith",
+          "familyName": "Ciantar"
+        },
+        {
+          "givenName": "Anthony",
+          "familyName": "Galassi"
+        },
+        {
+          "givenName": "Gabriel",
+          "familyName": "Gonzalez-Escamilla"
+        },
+        {
+          "givenName": "Sune",
+          "familyName": "Høgild Kelle"
+        },
+        {
+          "givenName": "Maqsood",
+          "familyName": "Yaqub"
+        },
+        {
+          "givenName": "Cyril",
+          "familyName": "Pernet"
+        }
+      ],
+      "keywords": [
+        "Positron Emission Tomography",
+        "PET",
+        "Brain",
+        "Source files",
+        "ecat7",
+        "DICOM",
+        "Phantom",
+        "Conversion",
+        "PET2BIDS",
+        "dcm2niix"
+      ]
+    },
+    {
+      "version": "V2",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000001%20OpenNeuroPET%20Phantoms/V2",
+      "description": "The PET Brain phantoms dataset is curated by OpenNeuroPET. This repository contains source data from PET scanners that need to be converted to nifti format, preferably following BIDS. An issue with ecat and DICOM data is that many tags are not mandatory and many values are not standardized making it difficult to harmonize the outputs of conversion, in particular side car json files. Here we collected many phantoms from different sites and scanners allowing to check the different header tags and values. This also allows validated conversion tools. Such test is performed via the code folder where one use the PET2BIDS library to do the conversion (which depends on dcm2niix for DICOM). Feel free to contact OpenNeuroPET to add your data from a scanner we have not tested. (total size: 0.6GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000001"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000001 V2 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "OpenNeuroPET Phantoms",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000001%20OpenNeuroPET%20Phantoms/V2",
+            "assetReferences": [
+              "https://doi.org/10.70883/RGNV3768"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "Attribution"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          }
+        ],
+        "creationDate": "2024-06-02",
+        "lastUpdated": "2025-11-14"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "authoritative": true
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-CCBY-001",
+            "sourceSections": [
+              "license"
+            ],
+            "confidence": "deterministic-license"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/RGNV3768",
+      "lastUpdated": "2025-11-14",
+      "creators": [
+        {
+          "givenName": "Søren",
+          "familyName": "Baarsgaard Hansen"
+        },
+        {
+          "givenName": "Murat",
+          "familyName": "Bilgel"
+        },
+        {
+          "givenName": "Keith",
+          "familyName": "Ciantar"
+        },
+        {
+          "givenName": "Anthony",
+          "familyName": "Galassi"
+        },
+        {
+          "givenName": "Gabriel",
+          "familyName": "Gonzalez-Escamilla"
+        },
+        {
+          "givenName": "Sune",
+          "familyName": "Høgild Kelle"
+        },
+        {
+          "givenName": "Maqsood",
+          "familyName": "Yaqub"
+        },
+        {
+          "givenName": "Cyril",
+          "familyName": "Pernet"
+        }
+      ],
+      "keywords": [
+        "Positron Emission Tomography",
+        "PET",
+        "Brain",
+        "Source files",
+        "ecat7",
+        "DICOM",
+        "Phantom",
+        "Conversion",
+        "PET2BIDS",
+        "dcm2niix"
+      ]
+    }
+  ]
+}

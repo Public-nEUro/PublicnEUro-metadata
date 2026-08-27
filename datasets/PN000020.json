@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000020",
+  "name": "Serotonine transporter imaging in MDMA or hallucinogenic drug users and non using controls",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000020%20Serotonine%20transporter%20imaging%20in%20MDMA%20or%20hallucinogenic%20drug%20users%20and%20non%20using%20controls/V1",
+      "description": "24 adult users of MDMA or hallucinogenic drugs and 21 nonusing controls were scanned with [11C]DASB PET. (total size: 5.58 GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000020"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000020 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "Serotonine transporter imaging in MDMA or hallucinogenic drug users and non using controls",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000020%20Serotonine%20transporter%20imaging%20in%20MDMA%20or%20hallucinogenic%20drug%20users%20and%20non%20using%20controls/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/ZKCF9211"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "General research use"
+            },
+            "rule": "Permitted",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory jurisdiction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Data controller oversight"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory compliance"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "User authentication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Confidentiality"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data security"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Re-identification"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data redistribution"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Profit-motivated use"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Unless written approval is obtained from the transferring data controller"
+            }
+          }
+        ],
+        "lastUpdated": "2026-04-10"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "Data User Agreement",
+          "url": "https://datacatalog.publicneuro.eu/dataset/PN000020%20Serotonine%20transporter%20imaging%20in%20MDMA%20or%20hallucinogenic%20drug%20users%20and%20non%20using%20controls/V1",
+          "authoritative": true,
+          "sha256": "23a42db232615bcfcc300918c610b3d68eb1d84dd3bdeb131da1ae6fc3d431d4"
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-RESEARCH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 1,
+            "mappingRule": "PN-DUC-JURISDICTION-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 2,
+            "mappingRule": "PN-DUC-CONTROLLER-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 3,
+            "mappingRule": "PN-DUC-LAW-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 4,
+            "mappingRule": "PN-DUC-AUTH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 5,
+            "mappingRule": "PN-DUC-CONFIDENTIAL-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 6,
+            "mappingRule": "PN-DUC-SECURITY-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 7,
+            "mappingRule": "PN-DUC-REID-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 8,
+            "mappingRule": "PN-DUC-REDISTRIBUTE-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 9,
+            "mappingRule": "PN-DUC-COMMERCIAL-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/ZKCF9211",
+      "lastUpdated": "2026-04-10",
+      "creators": [
+        {
+          "givenName": "David",
+          "familyName": "Erritzoe"
+        },
+        {
+          "givenName": "Vibe",
+          "familyName": "G. Frokjaer"
+        },
+        {
+          "givenName": "Klaus",
+          "familyName": "K. Holst"
+        }
+      ],
+      "keywords": [
+        "PET",
+        "MDMA",
+        "serotonin"
+      ]
+    }
+  ]
+}
