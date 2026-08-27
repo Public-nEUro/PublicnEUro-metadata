@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000003",
+  "name": "HCP multipipelines",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000003%20HCP%20multipipelines/V1",
+      "description": "While variability across participants or across acquisition instruments have been extensively studied in the neuroimaging literature the root causes of analytical variability remain an open question. Here, we share the derivatives from HCP-Young Adults dataset, including the statistical maps for 24 typical fMRI pipelines on 1080 participants. We share both individual and group results - for 1,000 groups of 50 participants - over 5 motor contrasts. (total size: 445.0GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000003"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000003 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "HCP multipipelines",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000003%20HCP%20multipipelines/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/GTKK1541"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "Regulatory jurisdiction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory compliance"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "User authentication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Re-identification"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data redistribution"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Derived data sharing"
+            },
+            "rule": "Permitted",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Only group-level outputs from which individual participant information cannot be deduced"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Publication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          }
+        ],
+        "creationDate": "2024-10-02",
+        "lastUpdated": "2024-10-02"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "Data User Agreement",
+          "url": "https://datacatalog.publicneuro.eu/dataset/PN000003%20HCP%20multipipelines/V1",
+          "authoritative": true,
+          "sha256": "25a6c839e698e4355f2e12dea1e635466f49f9cab932b21447f601f0751ad9b0"
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-JURISDICTION-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 1,
+            "mappingRule": "PN-DUC-LAW-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 2,
+            "mappingRule": "PN-DUC-AUTH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 3,
+            "mappingRule": "PN-DUC-REID-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 4,
+            "mappingRule": "PN-DUC-REDISTRIBUTE-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 5,
+            "mappingRule": "PN-DUC-DERIVATIVE-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 6,
+            "mappingRule": "PN-DUC-PUBLICATION-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/GTKK1541",
+      "lastUpdated": "2024-10-02",
+      "creators": [
+        {
+          "givenName": "Elodie",
+          "familyName": "Germani"
+        },
+        {
+          "givenName": "Elisa",
+          "familyName": "Fromont"
+        },
+        {
+          "givenName": "Pierre",
+          "familyName": "Maurel"
+        },
+        {
+          "givenName": "Camille",
+          "familyName": "Maumet"
+        }
+      ],
+      "keywords": [
+        "functional MRI",
+        "HCP-Young Adults",
+        "multiverse",
+        "FSL",
+        "motor task"
+      ]
+    }
+  ]
+}

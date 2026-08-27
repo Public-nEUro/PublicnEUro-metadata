@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000009",
+  "name": "Markerless Prospective Motion Correction",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000009%20Markerless%20Prospective%20Motion%20Correction/V1",
+      "description": "Datasets with and without deliberate head movements for evaluating the performance of markerless prospective motion correction and selective reacquisition in a general clinical protocol for brain MRI  - Head motion is one of the most common sources of artefacts in brain MRI. In this study, we evaluate the performance of markerless prospective motion correction (PMC) and selective reacquisition in a complete clinical protocol for brain MRI, comparing acquisitions with and without instructed intentional head motion.MRI and head motion data were acquired between January and March 2021 from 22 healthy adults (16 females, 6 males) aged 19-36 (mean standard deviation: 23.5 4.3) years, recruited for the Cimbi database (www.cimbi.dk). The recruitment was performed by advertisement for different research projects, with approval by the Ethics Committee of Copenhagen and Frederiksberg, Denmark (protocol number H-KF-2006-20). Written informed consent was obtained from each participant. The MRI scan protocol consisted of six different 2D- and 3D-encoded sequences, which were completed by a different number of participants: 3D T1 MPR (n=22), 3D T2 dark fluid (FLAIR) (n=10), 2D T1 STIR (n=22), 2D T2 TSE (n=22), 2D T2* GRE (n=19) and 2D DWI (n=10). Note, the DWI data (ADC, TRACEW) is located under derivatives.Four scans were acquired for each sequence: two without intentional head motion (referred to as still) and two with a predefined nodding motion (nod). For the T1 MPR sequence, two additional scans with shaking motion were acquired (shake). The participants were instructed to perform two periods of nodding or shaking motion for 40 seconds during the middle of the acquisition, corresponding to the acquisition of the k-space center for the 3D-encoded sequences. The scans with and without PMC were acquired in the following order:- Still, no correction- Still, PMC- Nod motion, no correction (+ selective reacquisition)- Nod motion, PMC (+ selective reacquisition)- Shake motion, no correction (+ selective reacquisition) - ONLY MPRAGE- Shake motion, PMC (+ selective reacquisition) - ONLY MPRAGE. Note that _run-01 indicates the still scans, _run-02 indicates the nodding scans and _run-03 indicates the shaking scans. _rec-wore indicates a scan without reacquisition, _rec-wre indicates a scan with reacquisition. Nodding motion was chosen as the primary motion pattern based on results of a previous study (https:/www.frontiersin.org/articles/10.3389/fradi.2021.789632/full) , where nodding rotation was found to be significantly larger than the rotational components around the other axes for awake children. Rigid-body head motion was measured with the optical tracking system Tracoline (TracInnovations, Ballerup, Denmark).\n\nMore details regarding the acquisition protocol can be seen in our preprint https:/psyarxiv.com/vzh4g. (total size: 1500.0GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000009"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000009 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "Markerless Prospective Motion Correction",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000009%20Markerless%20Prospective%20Motion%20Correction/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/QBVI3432"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "General research use"
+            },
+            "rule": "Permitted",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory jurisdiction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Data controller oversight"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory compliance"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "User authentication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Confidentiality"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data security"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Re-identification"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data redistribution"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Profit-motivated use"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Unless written approval is obtained from the transferring data controller"
+            }
+          }
+        ],
+        "creationDate": "2025-06-18",
+        "lastUpdated": "2025-06-18"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "Data User Agreement",
+          "url": "https://datacatalog.publicneuro.eu/dataset/PN000009%20Markerless%20Prospective%20Motion%20Correction/V1",
+          "authoritative": true,
+          "sha256": "eb03c5ba2b1ce2f2f9728220dcf0a86c28b94ac786a6ea795aa5f9ce31578757"
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-RESEARCH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 1,
+            "mappingRule": "PN-DUC-JURISDICTION-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 2,
+            "mappingRule": "PN-DUC-CONTROLLER-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 3,
+            "mappingRule": "PN-DUC-LAW-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 4,
+            "mappingRule": "PN-DUC-AUTH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 5,
+            "mappingRule": "PN-DUC-CONFIDENTIAL-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 6,
+            "mappingRule": "PN-DUC-SECURITY-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 7,
+            "mappingRule": "PN-DUC-REID-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 8,
+            "mappingRule": "PN-DUC-REDISTRIBUTE-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 9,
+            "mappingRule": "PN-DUC-COMMERCIAL-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/QBVI3432",
+      "lastUpdated": "2025-06-18",
+      "creators": [
+        {
+          "givenName": "Kathrine",
+          "familyName": "Skak Madsen"
+        },
+        {
+          "givenName": "Tim",
+          "familyName": "Ruschke"
+        },
+        {
+          "givenName": "Hannah",
+          "familyName": "Eichhorn"
+        },
+        {
+          "givenName": "Puk",
+          "familyName": "Rising"
+        },
+        {
+          "givenName": "Melanie",
+          "familyName": "Ganz"
+        }
+      ],
+      "keywords": [
+        "motion",
+        "MRI",
+        "K-space"
+      ]
+    }
+  ]
+}

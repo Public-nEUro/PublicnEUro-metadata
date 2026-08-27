@@ -1,0 +1,216 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000011",
+  "name": "A dataset of clinical pediatric brain MRI with and without motion correction",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000011%20A%20dataset%20of%20clinical%20pediatric%20brain%20MRI%20with%20and%20without%20motion%20correction/V1",
+      "description": "Pediatric patients recruited from the Copenhagen Capital Region.  Participants eligible for inclusion were children aged 4 to 11 years, referred for an elective, scheduled clinical cerebral MRI scan under GA. Children were excluded if they presented with an unstable medical condition or any contraindications compromising the safety of MRI—such as metal implants. Additional exclusion criteria included lack of fluency in Danish, significant visual or auditory impairments, or major physical or developmental challenges likely to interfere with participation in the experimental protocol. The number and type of images available for each patient vary but include a full cerebral clinical MRI protocol. The primary advantage of this dataset is the publication of clinically acquired MRI data with and without motion correction. Together with the image data, motion curves, expert image quality scores by a radiographer as well as automatic image quality scores based on reference-free image quality metrics are shared (total size: 4.2GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000011"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000011 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "A dataset of clinical pediatric brain MRI with and without motion correction",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000011%20A%20dataset%20of%20clinical%20pediatric%20brain%20MRI%20with%20and%20without%20motion%20correction/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/VMIF5895"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "General research use"
+            },
+            "rule": "Permitted",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory jurisdiction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory compliance"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "User authentication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Confidentiality"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data security"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Re-identification"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data redistribution"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Profit-motivated use"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Unless written approval is obtained from the transferring data controller"
+            }
+          }
+        ],
+        "creationDate": "2025-09-15",
+        "lastUpdated": "2025-09-15"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "Data User Agreement",
+          "url": "https://datacatalog.publicneuro.eu/dataset/PN000011%20A%20dataset%20of%20clinical%20pediatric%20brain%20MRI%20with%20and%20without%20motion%20correction/V1",
+          "authoritative": true,
+          "sha256": "49b9917a86e229587748fdee6b127e959728d42cdda34bf21d0fe27cc7d423bb"
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-RESEARCH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 1,
+            "mappingRule": "PN-DUC-JURISDICTION-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 2,
+            "mappingRule": "PN-DUC-LAW-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 3,
+            "mappingRule": "PN-DUC-AUTH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 4,
+            "mappingRule": "PN-DUC-CONFIDENTIAL-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 5,
+            "mappingRule": "PN-DUC-SECURITY-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 6,
+            "mappingRule": "PN-DUC-REID-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 7,
+            "mappingRule": "PN-DUC-REDISTRIBUTE-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 8,
+            "mappingRule": "PN-DUC-COMMERCIAL-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/VMIF5895",
+      "lastUpdated": "2025-09-15",
+      "creators": [
+        {
+          "givenName": "Llucia",
+          "familyName": "Coll"
+        },
+        {
+          "givenName": "Thurid",
+          "familyName": "Waagstein Madsen"
+        },
+        {
+          "givenName": "Kathrine",
+          "familyName": "Skak Madsen"
+        },
+        {
+          "givenName": "Melanie",
+          "familyName": "Ganz"
+        }
+      ],
+      "keywords": [
+        "pediatric",
+        "MRI",
+        "motion correction"
+      ]
+    }
+  ]
+}

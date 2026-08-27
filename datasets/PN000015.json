@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000015",
+  "name": "multimodal total-body dynamic 18F-FDG PET-CT-MRI",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000015%20multimodal%20total-body%20dynamic%2018F-FDG%20PET-CT-MRI/V1",
+      "description": "Companion dataset for PN000014 (https://doi.org/10.70883/GIOX3828): 70min 18F-FDG dynamic nifti files and corresponding resampled CT, MRI, and segmentations for 80 age and sex stratified healthy controls of the hedyPET cohort. (total size: 212.17 GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000015"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000015 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "multimodal total-body dynamic 18F-FDG PET-CT-MRI",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000015%20multimodal%20total-body%20dynamic%2018F-FDG%20PET-CT-MRI/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/UYAG3430"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "Attribution"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          }
+        ],
+        "lastUpdated": "2025-10-30"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "CCBY4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "authoritative": true
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-CCBY-001",
+            "sourceSections": [
+              "license"
+            ],
+            "confidence": "deterministic-license"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/UYAG3430",
+      "lastUpdated": "2025-10-30",
+      "creators": [
+        {
+          "givenName": "Christian",
+          "familyName": "Hinge"
+        },
+        {
+          "givenName": "Frederikke",
+          "familyName": "Engel Høi-Hansen"
+        },
+        {
+          "givenName": "Rasmus",
+          "familyName": "Hvass Hansen"
+        },
+        {
+          "givenName": "Kirsten",
+          "familyName": "Korsholm"
+        },
+        {
+          "givenName": "Helle",
+          "familyName": "Hjorth Johannesen"
+        },
+        {
+          "givenName": "Elisabeth",
+          "familyName": "Albrech-Beste"
+        },
+        {
+          "givenName": "Eunice",
+          "familyName": "Sánchez Saxtoft"
+        },
+        {
+          "givenName": "Vibeke",
+          "familyName": "Jensen"
+        },
+        {
+          "givenName": "Christina",
+          "familyName": "Schulze"
+        },
+        {
+          "givenName": "Christina",
+          "familyName": "Mikkelsen"
+        },
+        {
+          "givenName": "Cyril",
+          "familyName": "Pernet"
+        },
+        {
+          "givenName": "Janna",
+          "familyName": "Nissen"
+        },
+        {
+          "givenName": "Sisse",
+          "familyName": "Rye Ostrowski"
+        },
+        {
+          "givenName": "Barbara",
+          "familyName": "Malene Fischer"
+        },
+        {
+          "givenName": "Claes",
+          "familyName": "Nøhr Ladefoged"
+        },
+        {
+          "givenName": "Flemming",
+          "familyName": "Littrup Andersen"
+        }
+      ],
+      "keywords": [
+        "PET",
+        "CT",
+        "MRI",
+        "LAFOV",
+        "Whole-Body",
+        "18F-FDG",
+        "Control",
+        "Dynamic Topogram"
+      ]
+    }
+  ]
+}

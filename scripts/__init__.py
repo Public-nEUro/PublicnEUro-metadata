@@ -1,0 +1,1 @@
+"""PublicnEUro metadata generation utilities."""

@@ -1,0 +1,1801 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:ns2="https://www.openaire.eu/cerif-profile/1.2/" xmlns:ns3="https://www.openaire.eu/cerif-profile/vocab/COAR_Product_Types" xmlns:ns4="http://purl.org/coar/access_right" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd https://www.openaire.eu/cerif-profile/1.2/ https://www.openaire.eu/schema/cris/current/openaire-cerif-profile.xsd">
+  <responseDate>2026-08-20T15:48:14Z</responseDate>
+  <request metadataPrefix="cerif_openaire" verb="ListRecords" set="openaire_cris_datasets">https://datacatalog.publicneuro.eu/openaire</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000001-V1</identifier>
+        <datestamp>2024-06-02T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000001-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">OpenNeuroPET Phantoms</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/IGQP1334</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000001%20OpenNeuroPET%20Phantoms/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Baarsgaard Hansen</ns2:FamilyNames>
+                  <ns2:FirstNames>Søren</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Bilgel</ns2:FamilyNames>
+                  <ns2:FirstNames>Murat</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Ciantar</ns2:FamilyNames>
+                  <ns2:FirstNames>Keith</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Galassi</ns2:FamilyNames>
+                  <ns2:FirstNames>Anthony</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V1-5">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Gonzalez-Escamilla</ns2:FamilyNames>
+                  <ns2:FirstNames>Gabriel</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V1-6">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Høgild Kelle</ns2:FamilyNames>
+                  <ns2:FirstNames>Sune</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V1-7">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Yaqub</ns2:FamilyNames>
+                  <ns2:FirstNames>Maqsood</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V1-8">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Pernet</ns2:FamilyNames>
+                  <ns2:FirstNames>Cyril</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:License scheme="https://spdx.org/licenses">https://spdx.org/licenses/CC-BY-4.0</ns2:License>
+          <ns2:Description xml:lang="en">The PET Brain phantoms dataset is curated by OpenNeuroPET. This repository contains source data from PET scanners that need to be converted to nifti format, preferably following BIDS. An issue with ecat and DICOM data is that many tags are not mandatory and many values are not standardized making it difficult to harmonize the outputs of conversion, in particular side car json files. Here we collected many phantoms from different sites and scanners allowing to check the different header tags and values. This also allows validated conversion tools. Such test is performed via the code folder where one use the PET2BIDS library to do the conversion (which depends on dcm2niix for DICOM). Feel free to contact OpenNeuroPET to add your data from a scanner we have not tested. (total size: 0.6GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">Positron Emission Tomography</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Brain</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Source files</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">ecat7</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">DICOM</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Phantom</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Conversion</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET2BIDS</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">dcm2niix</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2024-06-02" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000001-V2</identifier>
+        <datestamp>2025-11-14T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000001-V2">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">OpenNeuroPET Phantoms</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V2</ns2:VersionInfo>
+          <ns2:DOI>10.70883/RGNV3768</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000001%20OpenNeuroPET%20Phantoms/V2</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V2-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Baarsgaard Hansen</ns2:FamilyNames>
+                  <ns2:FirstNames>Søren</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V2-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Bilgel</ns2:FamilyNames>
+                  <ns2:FirstNames>Murat</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V2-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Ciantar</ns2:FamilyNames>
+                  <ns2:FirstNames>Keith</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V2-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Galassi</ns2:FamilyNames>
+                  <ns2:FirstNames>Anthony</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V2-5">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Gonzalez-Escamilla</ns2:FamilyNames>
+                  <ns2:FirstNames>Gabriel</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V2-6">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Høgild Kelle</ns2:FamilyNames>
+                  <ns2:FirstNames>Sune</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V2-7">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Yaqub</ns2:FamilyNames>
+                  <ns2:FirstNames>Maqsood</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000001-V2-8">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Pernet</ns2:FamilyNames>
+                  <ns2:FirstNames>Cyril</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:License scheme="https://spdx.org/licenses">https://spdx.org/licenses/CC-BY-4.0</ns2:License>
+          <ns2:Description xml:lang="en">The PET Brain phantoms dataset is curated by OpenNeuroPET. This repository contains source data from PET scanners that need to be converted to nifti format, preferably following BIDS. An issue with ecat and DICOM data is that many tags are not mandatory and many values are not standardized making it difficult to harmonize the outputs of conversion, in particular side car json files. Here we collected many phantoms from different sites and scanners allowing to check the different header tags and values. This also allows validated conversion tools. Such test is performed via the code folder where one use the PET2BIDS library to do the conversion (which depends on dcm2niix for DICOM). Feel free to contact OpenNeuroPET to add your data from a scanner we have not tested. (total size: 0.6GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">Positron Emission Tomography</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Brain</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Source files</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">ecat7</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">DICOM</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Phantom</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Conversion</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET2BIDS</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">dcm2niix</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-11-14" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000002-V1</identifier>
+        <datestamp>2024-09-15T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000002-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Aggression Project</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/DEYZ5967</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000002%20Aggression%20Project/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000002-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>da Cunha-Bang</ns2:FamilyNames>
+                  <ns2:FirstNames>Sofi</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000002-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Vadskjaer Hjordt</ns2:FamilyNames>
+                  <ns2:FirstNames>Liv</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000002-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Perfalk</ns2:FamilyNames>
+                  <ns2:FirstNames>Erik</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000002-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Bock</ns2:FamilyNames>
+                  <ns2:FirstNames>Camilla</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000002-V1-5">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Sestoft</ns2:FamilyNames>
+                  <ns2:FirstNames>Dorte M.</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000002-V1-6">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Fisher</ns2:FamilyNames>
+                  <ns2:FirstNames>Patrick</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000002-V1-7">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Moos Knudsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Gitte</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">The Aggression Project aimed to determine brain mechanisms underlying aggression using 5-HT1BR PET ([11C]AZ10419369) and MRI. Participants recruited included incarcerated violent offenders and healthy controls. (total size: 16.0GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">functional MRI</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">HCP-Young Adults</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">multiverse</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">analytical choices</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">motor task</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2024-09-15" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000003-V1</identifier>
+        <datestamp>2024-10-02T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000003-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">HCP multipipelines</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/GTKK1541</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000003%20HCP%20multipipelines/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000003-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Germani</ns2:FamilyNames>
+                  <ns2:FirstNames>Elodie</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000003-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Fromont</ns2:FamilyNames>
+                  <ns2:FirstNames>Elisa</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000003-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Maurel</ns2:FamilyNames>
+                  <ns2:FirstNames>Pierre</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000003-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Maumet</ns2:FamilyNames>
+                  <ns2:FirstNames>Camille</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">While variability across participants or across acquisition instruments have been extensively studied in the neuroimaging literature the root causes of analytical variability remain an open question. Here, we share the derivatives from HCP-Young Adults dataset, including the statistical maps for 24 typical fMRI pipelines on 1080 participants. We share both individual and group results - for 1,000 groups of 50 participants - over 5 motor contrasts. (total size: 445.0GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">functional MRI</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">HCP-Young Adults</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">multiverse</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">FSL</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">motor task</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2024-10-02" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000004-V1</identifier>
+        <datestamp>2025-02-15T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000004-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Closed Loop Sleep Motor Memory</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/QXBH2876</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000004%20Closed%20Loop%20Sleep%20Motor%20Memory/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000004-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Nicolas</ns2:FamilyNames>
+                  <ns2:FirstNames>Judith</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000004-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Leroux</ns2:FamilyNames>
+                  <ns2:FirstNames>Gaëlle</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">Unraveling the Neurophysiological Correlates of Phase-Specific Enhancement of Motor Memory Consolidation via Slow-Wave Closed-Loop Targeted Memory Reactivation (total size: 81.0GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">sleep</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">motor learning</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-02-15" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000005-V1</identifier>
+        <datestamp>2025-09-22T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000005-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Leuven PET UCB-J dataset 1 in control participants</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/BKWA8149</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000005%20Leuven%20PET%20UCB-J%20dataset%201%20in%20control%20participants/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000005-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Van Laere</ns2:FamilyNames>
+                  <ns2:FirstNames>Koen</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000005-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Koole</ns2:FamilyNames>
+                  <ns2:FirstNames>Michel</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000005-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>De Hoon</ns2:FamilyNames>
+                  <ns2:FirstNames>Jan</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">UCB-J in healthy volunteers: dynamic PET baseline scan (0-90 min), T1w and eASL (total size: 1.1GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">T1w</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">eASL</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">SV2A</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">11C</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">dynamic</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-09-22" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000006-V1</identifier>
+        <datestamp>2025-09-22T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000006-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Leuven PET UCB-J dataset 2 in control participants</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/FIYQ9929</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000006%20Leuven%20PET%20UCB-J%20dataset%202%20in%20control%20participants/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000006-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Van Laere</ns2:FamilyNames>
+                  <ns2:FirstNames>Koen</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000006-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Van Aalst</ns2:FamilyNames>
+                  <ns2:FirstNames>June</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">UCB-J in healthy volunteers: dynamic UCB-J and FDG PET baseline scans (60 - 90 min after injection),  T1w and FLAIR (total size: 0.65GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">T1w</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">FLAIR</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">SV2A</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">11C</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">dynamic</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">FDG</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-09-22" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000007-V1</identifier>
+        <datestamp>2025-09-22T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000007-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Leuven PET UCB-J dataset 3 in control participants</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/GUMA1819</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000007%20Leuven%20PET%20UCB-J%20dataset%203%20in%20control%20participants/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000007-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Vanhaute</ns2:FamilyNames>
+                  <ns2:FirstNames>Heleen</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000007-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Michiels</ns2:FamilyNames>
+                  <ns2:FirstNames>Laura</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000007-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Vanderlinden</ns2:FamilyNames>
+                  <ns2:FirstNames>Greet</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000007-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Vandenbulcke</ns2:FamilyNames>
+                  <ns2:FirstNames>Mathieu</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">UCB-J in healthy volunteers: dynamic UCB-J PET baseline scans (60 - 90 min after injection), eASL, T1w and DWI (total size: 3.1GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">T1w</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">SV2A</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">11C</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">dynamic</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">eASL</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">DWI</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-09-22" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000008-V1</identifier>
+        <datestamp>2025-09-22T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000008-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Leuven PET UCB-J dataset 4 in control participants</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/MIIQ4096</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000008%20Leuven%20PET%20UCB-J%20dataset%204%20in%20control%20participants/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000008-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Van Laere</ns2:FamilyNames>
+                  <ns2:FirstNames>Koen</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000008-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Delva</ns2:FamilyNames>
+                  <ns2:FirstNames>Aline</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000008-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Vandenberghe</ns2:FamilyNames>
+                  <ns2:FirstNames>Wim</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">Test-retest in healthy volunteers: dynamic UCB-J PET baseline scan (60 - 90 min after injection), dynamic PE2I PET baseline scan (50 - 70 min after injection), T1w  (total size: 1.8GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PE2I</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">T1w</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">SV2A</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">11C</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">dynamic</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-09-22" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000009-V1</identifier>
+        <datestamp>2025-06-18T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000009-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Markerless Prospective Motion Correction</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/QBVI3432</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000009%20Markerless%20Prospective%20Motion%20Correction/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000009-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Skak Madsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Kathrine</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000009-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Ruschke</ns2:FamilyNames>
+                  <ns2:FirstNames>Tim</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000009-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Eichhorn</ns2:FamilyNames>
+                  <ns2:FirstNames>Hannah</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000009-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Rising</ns2:FamilyNames>
+                  <ns2:FirstNames>Puk</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000009-V1-5">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Ganz</ns2:FamilyNames>
+                  <ns2:FirstNames>Melanie</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">Datasets with and without deliberate head movements for evaluating the performance of markerless prospective motion correction and selective reacquisition in a general clinical protocol for brain MRI  - Head motion is one of the most common sources of artefacts in brain MRI. In this study, we evaluate the performance of markerless prospective motion correction (PMC) and selective reacquisition in a complete clinical protocol for brain MRI, comparing acquisitions with and without instructed intentional head motion.MRI and head motion data were acquired between January and March 2021 from 22 healthy adults (16 females, 6 males) aged 19-36 (mean standard deviation: 23.5 4.3) years, recruited for the Cimbi database (www.cimbi.dk). The recruitment was performed by advertisement for different research projects, with approval by the Ethics Committee of Copenhagen and Frederiksberg, Denmark (protocol number H-KF-2006-20). Written informed consent was obtained from each participant. The MRI scan protocol consisted of six different 2D- and 3D-encoded sequences, which were completed by a different number of participants: 3D T1 MPR (n=22), 3D T2 dark fluid (FLAIR) (n=10), 2D T1 STIR (n=22), 2D T2 TSE (n=22), 2D T2* GRE (n=19) and 2D DWI (n=10). Note, the DWI data (ADC, TRACEW) is located under derivatives.Four scans were acquired for each sequence: two without intentional head motion (referred to as still) and two with a predefined nodding motion (nod). For the T1 MPR sequence, two additional scans with shaking motion were acquired (shake). The participants were instructed to perform two periods of nodding or shaking motion for 40 seconds during the middle of the acquisition, corresponding to the acquisition of the k-space center for the 3D-encoded sequences. The scans with and without PMC were acquired in the following order:- Still, no correction- Still, PMC- Nod motion, no correction (+ selective reacquisition)- Nod motion, PMC (+ selective reacquisition)- Shake motion, no correction (+ selective reacquisition) - ONLY MPRAGE- Shake motion, PMC (+ selective reacquisition) - ONLY MPRAGE. Note that _run-01 indicates the still scans, _run-02 indicates the nodding scans and _run-03 indicates the shaking scans. _rec-wore indicates a scan without reacquisition, _rec-wre indicates a scan with reacquisition. Nodding motion was chosen as the primary motion pattern based on results of a previous study (https:/www.frontiersin.org/articles/10.3389/fradi.2021.789632/full) , where nodding rotation was found to be significantly larger than the rotational components around the other axes for awake children. Rigid-body head motion was measured with the optical tracking system Tracoline (TracInnovations, Ballerup, Denmark).
+
+More details regarding the acquisition protocol can be seen in our preprint https:/psyarxiv.com/vzh4g. (total size: 1500.0GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">motion</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">K-space</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-06-18" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000010-V1</identifier>
+        <datestamp>2025-09-22T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000010-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Leuven PET UCB-J dataset 5 in control participants</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/WSYQ4663</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000010%20Leuven%20PET%20UCB-J%20dataset%205%20in%20control%20participants/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000010-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Van Laere</ns2:FamilyNames>
+                  <ns2:FirstNames>Koen</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000010-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Delva</ns2:FamilyNames>
+                  <ns2:FirstNames>Aline</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000010-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Vandenberghe</ns2:FamilyNames>
+                  <ns2:FirstNames>Wim</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">Test-retest in healthy volunteers: dynamic UCB-J PET baseline scan (60 - 100 min after injection), dynamic FDG PET baseline scan (30 - 50 min after injection), T1w (total size: 1.4GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">FDG</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">T1w</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">SV2A</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">11C</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">dynamic</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-09-22" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000011-V1</identifier>
+        <datestamp>2025-09-15T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000011-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">A dataset of clinical pediatric brain MRI with and without motion correction</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/VMIF5895</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000011%20A%20dataset%20of%20clinical%20pediatric%20brain%20MRI%20with%20and%20without%20motion%20correction/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000011-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Coll</ns2:FamilyNames>
+                  <ns2:FirstNames>Llucia</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000011-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Waagstein Madsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Thurid</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000011-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Skak Madsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Kathrine</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000011-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Ganz</ns2:FamilyNames>
+                  <ns2:FirstNames>Melanie</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">Pediatric patients recruited from the Copenhagen Capital Region.  Participants eligible for inclusion were children aged 4 to 11 years, referred for an elective, scheduled clinical cerebral MRI scan under GA. Children were excluded if they presented with an unstable medical condition or any contraindications compromising the safety of MRI—such as metal implants. Additional exclusion criteria included lack of fluency in Danish, significant visual or auditory impairments, or major physical or developmental challenges likely to interfere with participation in the experimental protocol. The number and type of images available for each patient vary but include a full cerebral clinical MRI protocol. The primary advantage of this dataset is the publication of clinically acquired MRI data with and without motion correction. Together with the image data, motion curves, expert image quality scores by a radiographer as well as automatic image quality scores based on reference-free image quality metrics are shared (total size: 4.2GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">pediatric</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">motion correction</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-09-15" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000012-V1</identifier>
+        <datestamp>2026-04-10T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000012-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">PET UCB-J in healthy adult participants across the life span</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/NRUJ1547</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000012%20PET%20UCB-J%20in%20healthy%20adult%20participants%20across%20the%20life%20span/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000012-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Armand</ns2:FamilyNames>
+                  <ns2:FirstNames>Sophia</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000012-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Moos Knudsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Gitte</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000012-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Johansen</ns2:FamilyNames>
+                  <ns2:FirstNames>Annette</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">The dataset contains 120 min dynamic scan starting with C11-UCBJ bolus along with T1w and T2w MRI data from people aged between 20 and 83 years old.</ns2:Description>
+          <ns2:Keyword xml:lang="en">dynamic</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">11C</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">T2w</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">T1w</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">SV2A</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2026-04-10" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000013-V1</identifier>
+        <datestamp>2022-03-01T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000013-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Aarhus University (PACE) UCBJ cohort </ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/PPNJ4476</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000013%20Aarhus%20University%20%28PACE%29%20UCBJ%20cohort/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000013-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>B. Andersen</ns2:FamilyNames>
+                  <ns2:FirstNames>Katrine</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000013-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Borghammer</ns2:FamilyNames>
+                  <ns2:FirstNames>Per</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">Multimodal neuroimaging dataset from the Aarhus University UCB-J project including T1-weighted MRI, [11C]UCB-J PET, and FDG PET. The dataset includes healthy controls (young and older) and patients with Parkinson’s disease spectrum disorders (PD, DLB, PDD), organized in BIDS format. (total size: 2.63 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">Parkinson's disease</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">dementia with Lewy bodies</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Parkinson's disease dementia</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">[11C]UCB-J</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">FDG PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">T1-weighted MRI</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">synaptic density</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">glucose metabolism</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">healthy controls</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">aging</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2022-03-01" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000014-V1</identifier>
+        <datestamp>2025-10-30T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000014-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">multimodal total-body 18F-FDG PET-CT-MRI - static images</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/GIOX3828</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000014%20multimodal%20total-body%2018F-FDG%20PET-CT-MRI%20-%20static%20images/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hinge</ns2:FamilyNames>
+                  <ns2:FirstNames>Christian</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Engel Høi-Hansen</ns2:FamilyNames>
+                  <ns2:FirstNames>Frederikke</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hvass Hansen</ns2:FamilyNames>
+                  <ns2:FirstNames>Rasmus</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Korsholm</ns2:FamilyNames>
+                  <ns2:FirstNames>Kirsten</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-5">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hjorth Johannesen</ns2:FamilyNames>
+                  <ns2:FirstNames>Helle</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-6">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Albrech-Beste</ns2:FamilyNames>
+                  <ns2:FirstNames>Elisabeth</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-7">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Sánchez Saxtoft</ns2:FamilyNames>
+                  <ns2:FirstNames>Eunice</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-8">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Jensen</ns2:FamilyNames>
+                  <ns2:FirstNames>Vibeke</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-9">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Schulze</ns2:FamilyNames>
+                  <ns2:FirstNames>Christina</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-10">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Mikkelsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Christina</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-11">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Pernet</ns2:FamilyNames>
+                  <ns2:FirstNames>Cyril</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-12">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Nissen</ns2:FamilyNames>
+                  <ns2:FirstNames>Janna</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-13">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Rye Ostrowski</ns2:FamilyNames>
+                  <ns2:FirstNames>Sisse</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-14">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Malene Fischer</ns2:FamilyNames>
+                  <ns2:FirstNames>Barbara</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-15">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Nøhr Ladefoged</ns2:FamilyNames>
+                  <ns2:FirstNames>Claes</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000014-V1-16">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Littrup Andersen</ns2:FamilyNames>
+                  <ns2:FirstNames>Flemming</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:License scheme="https://spdx.org/licenses">https://spdx.org/licenses/CC-BY-4.0</ns2:License>
+          <ns2:Description xml:lang="en">Whole-body static 18F-FDG PET reconstructions, CT, and MRI for 80 age and sex stratified healthy controls of the hedyPET cohort. Derivatives include totalsegmentator segmentations, synthseg brain segmentations, and pipelines that contains images resampled (registered for MRI) to common spaces. (total size: 69.87 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">CT</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">LAFOV</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Whole-Body</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">18F-FDG</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Control</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-10-30" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000015-V1</identifier>
+        <datestamp>2025-10-30T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000015-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">multimodal total-body dynamic 18F-FDG PET-CT-MRI</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/UYAG3430</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000015%20multimodal%20total-body%20dynamic%2018F-FDG%20PET-CT-MRI/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hinge</ns2:FamilyNames>
+                  <ns2:FirstNames>Christian</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Engel Høi-Hansen</ns2:FamilyNames>
+                  <ns2:FirstNames>Frederikke</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hvass Hansen</ns2:FamilyNames>
+                  <ns2:FirstNames>Rasmus</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Korsholm</ns2:FamilyNames>
+                  <ns2:FirstNames>Kirsten</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-5">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hjorth Johannesen</ns2:FamilyNames>
+                  <ns2:FirstNames>Helle</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-6">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Albrech-Beste</ns2:FamilyNames>
+                  <ns2:FirstNames>Elisabeth</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-7">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Sánchez Saxtoft</ns2:FamilyNames>
+                  <ns2:FirstNames>Eunice</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-8">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Jensen</ns2:FamilyNames>
+                  <ns2:FirstNames>Vibeke</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-9">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Schulze</ns2:FamilyNames>
+                  <ns2:FirstNames>Christina</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-10">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Mikkelsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Christina</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-11">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Pernet</ns2:FamilyNames>
+                  <ns2:FirstNames>Cyril</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-12">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Nissen</ns2:FamilyNames>
+                  <ns2:FirstNames>Janna</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-13">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Rye Ostrowski</ns2:FamilyNames>
+                  <ns2:FirstNames>Sisse</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-14">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Malene Fischer</ns2:FamilyNames>
+                  <ns2:FirstNames>Barbara</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-15">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Nøhr Ladefoged</ns2:FamilyNames>
+                  <ns2:FirstNames>Claes</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000015-V1-16">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Littrup Andersen</ns2:FamilyNames>
+                  <ns2:FirstNames>Flemming</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:License scheme="https://spdx.org/licenses">https://spdx.org/licenses/CC-BY-4.0</ns2:License>
+          <ns2:Description xml:lang="en">Companion dataset for PN000014 (https://doi.org/10.70883/GIOX3828): 70min 18F-FDG dynamic nifti files and corresponding resampled CT, MRI, and segmentations for 80 age and sex stratified healthy controls of the hedyPET cohort. (total size: 212.17 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">CT</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">LAFOV</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Whole-Body</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">18F-FDG</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Control</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Dynamic Topogram</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-10-30" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000016-V1</identifier>
+        <datestamp>2025-10-30T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000016-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">multimodal total-body source data 18F-FDG PET-CT-MRI</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/JZJH3431</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000016%20multimodal%20total-body%20source%20data%2018F-FDG%20PET-CT-MRI/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hinge</ns2:FamilyNames>
+                  <ns2:FirstNames>Christian</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Engel Høi-Hansen</ns2:FamilyNames>
+                  <ns2:FirstNames>Frederikke</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hvass Hansen</ns2:FamilyNames>
+                  <ns2:FirstNames>Rasmus</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Korsholm</ns2:FamilyNames>
+                  <ns2:FirstNames>Kirsten</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-5">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hjorth Johannesen</ns2:FamilyNames>
+                  <ns2:FirstNames>Helle</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-6">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Albrech-Beste</ns2:FamilyNames>
+                  <ns2:FirstNames>Elisabeth</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-7">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Sánchez Saxtoft</ns2:FamilyNames>
+                  <ns2:FirstNames>Eunice</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-8">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Jensen</ns2:FamilyNames>
+                  <ns2:FirstNames>Vibeke</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-9">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Schulze</ns2:FamilyNames>
+                  <ns2:FirstNames>Christina</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-10">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Mikkelsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Christina</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-11">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Pernet</ns2:FamilyNames>
+                  <ns2:FirstNames>Cyril</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-12">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Nissen</ns2:FamilyNames>
+                  <ns2:FirstNames>Janna</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-13">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Rye Ostrowski</ns2:FamilyNames>
+                  <ns2:FirstNames>Sisse</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-14">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Malene Fischer</ns2:FamilyNames>
+                  <ns2:FirstNames>Barbara</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-15">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Nøhr Ladefoged</ns2:FamilyNames>
+                  <ns2:FirstNames>Claes</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000016-V1-16">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Littrup Andersen</ns2:FamilyNames>
+                  <ns2:FirstNames>Flemming</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">70min 18F-FDG Listmode and DICOM CT source files for 80 age and sex stratified healthy controls of the hedyPET cohort. Data is organized in the folder-structure needed for Siemens JSRecon (e7). (total size: 2593.18GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Control</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">18F-FDG</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Whole-Body</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">CT</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">LAFOV</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Listmode</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2025-10-30" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000017-V1</identifier>
+        <datestamp>2026-04-10T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000017-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Serotonine transporter data in healthy and obese participants.</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/GBWN3773</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000017%20Serotonine%20transporter%20data%20in%20healthy%20and%20obese%20participants/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000017-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>M. Knudsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Gitte</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000017-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>G. Frokjaer</ns2:FamilyNames>
+                  <ns2:FirstNames>Vibe</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">This dataset is a combination of studies ran under the same ethic approval, combining data from healthy individuals and obese patients. (total size: 12.26 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">DASB</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2026-04-10" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000018-V1</identifier>
+        <datestamp>2026-04-10T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000018-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Gonadotrophin releasing hormone agonist (GnRHa) sex-hormone manipulation model of risk for depression</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/MYCX5689</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000018%20Gonadotrophin%20releasing%20hormone%20agonist%20%28GnRHa%29%20sex-hormone%20manipulation%20model%20of%20risk%20for%20depression/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000018-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>G. Frokjaer</ns2:FamilyNames>
+                  <ns2:FirstNames>Vibe</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000018-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Pinborg</ns2:FamilyNames>
+                  <ns2:FirstNames>Anja</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000018-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>M. Knudsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Gitte</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">63 healthy female volunteers participated in this randomized (1:1), placebo-controlled double blind study of neurobiological and psychometrical signatures of ovarian sex hormone suppression. (total size: 39.54 GB)</ns2:Description>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2026-04-10" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000019-V1</identifier>
+        <datestamp>2026-04-10T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000019-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Serotonine transporter PET data in healthy controls during bright-light therapy</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/JEKA8722</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000019%20Serotonine%20transporter%20PET%20data%20in%20healthy%20controls%20during%20bright-light%20therapy/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000019-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>M. Fisher</ns2:FamilyNames>
+                  <ns2:FirstNames>Patrick</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000019-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>K. Madsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Martin</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000019-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>M. Knudsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Gitte</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">Dataset for PET imaging using the [11C]DASB tracer for the LYS study containing scans of 24 healthy men, before and after three weeks of bright light therapy. (total size: 12.17 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">DASB</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">healthy controls</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2026-04-10" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000020-V1</identifier>
+        <datestamp>2026-04-10T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000020-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Serotonine transporter imaging in MDMA or hallucinogenic drug users and non using controls</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/ZKCF9211</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000020%20Serotonine%20transporter%20imaging%20in%20MDMA%20or%20hallucinogenic%20drug%20users%20and%20non%20using%20controls/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000020-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Erritzoe</ns2:FamilyNames>
+                  <ns2:FirstNames>David</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000020-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>G. Frokjaer</ns2:FamilyNames>
+                  <ns2:FirstNames>Vibe</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000020-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>K. Holst</ns2:FamilyNames>
+                  <ns2:FirstNames>Klaus</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">24 adult users of MDMA or hallucinogenic drugs and 21 nonusing controls were scanned with [11C]DASB PET. (total size: 5.58 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">MDMA</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2026-04-10" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000021-V1</identifier>
+        <datestamp>2026-04-10T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000021-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Serotonine transporter imaging in seasonal affective disorder</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/FRBP6839</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000021%20Serotonine%20transporter%20imaging%20in%20seasonal%20affective%20disorder/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000021-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Mc Mahon</ns2:FamilyNames>
+                  <ns2:FirstNames>Brenda</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000021-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>B. Andersen</ns2:FamilyNames>
+                  <ns2:FirstNames>Sofie</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000021-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>K. Holst</ns2:FamilyNames>
+                  <ns2:FirstNames>Klaus</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000021-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>G. Frokjaer</ns2:FamilyNames>
+                  <ns2:FirstNames>Vibe</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000021-V1-5">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>M. Knudsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Gitte</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">The dataset is a subset of (11)C-DASB positron emission tomography scans that were conducted to quantify cerebral serotonin transporter binding; 23 healthy controls with low seasonality scores and 17 patients diagnosed with seasonal affective disorder were scanned in both summer and winter to investigate differences in cerebral serotonin transporter binding across groups and across seasons. (total size: 13.36 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">SAD</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2026-04-10" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000022-V1</identifier>
+        <datestamp>2026-04-10T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000022-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Serotonergic brain architecture of early Alzheimers Disease.</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/MRPF9876</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000022%20Serotonergic%20brain%20architecture%20of%20early%20Alzheimers%20Disease/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000022-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Haugbøl</ns2:FamilyNames>
+                  <ns2:FirstNames>Steven</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000022-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>H. Pinborg</ns2:FamilyNames>
+                  <ns2:FirstNames>Lars</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000022-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>M. Knudsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Gitte</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">Twelve patients with AD (average Mini Mental State Examination [MMSE]: 24) and 11 healthy age-matched subjects underwent positron emission tomography (total size: 2.87 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">Alzhrimers Disease</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2026-04-10" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000023-V1</identifier>
+        <datestamp>2026-04-10T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000023-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">Familial risk for affective disorders and serotonergic brain architecture</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/NRUJ1547</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000023%20Familial%20risk%20for%20affective%20disorders%20and%20serotonergic%20brain%20architecture/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000023-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>G. Frokjaer</ns2:FamilyNames>
+                  <ns2:FirstNames>Vibe</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000023-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>M. Knudsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Gitte</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">Nine individuals at high familial risk and 11 individuals at low risk for developing mood disorder were included and underwent Positron Emission Tomography. The participants were healthy twins with or without a co-twin history of mood disorder identified by linking information from the Danish Twin Register and the Danish Psychiatric Central Register. (total size: 1.26 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">Sertonin</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">Healthy</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2026-04-10" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:datacatalog.publicneuro.eu:Products/PN000024-V1</identifier>
+        <datestamp>2026-06-17T00:00:00Z</datestamp>
+        <setSpec>openaire_cris_datasets</setSpec>
+      </header>
+      <metadata>
+        <ns2:Product id="Products/PN000024-V1">
+          <ns3:Type>http://purl.org/coar/resource_type/c_ddb1</ns3:Type>
+          <ns2:Name xml:lang="en">A clinical brain MRI dataset of polymicrogyria in patients suspected of epilepsy</ns2:Name>
+          <ns2:VersionInfo xml:lang="en">V1</ns2:VersionInfo>
+          <ns2:DOI>10.70883/GBSQ9852</ns2:DOI>
+          <ns2:URL>https://datacatalog.publicneuro.eu/dataset/PN000024%20A%20clinical%20brain%20MRI%20dataset%20of%20polymicrogyria%20in%20patients%20suspected%20of%20epilepsy/V1</ns2:URL>
+          <ns2:Creators>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000024-V1-1">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Coll</ns2:FamilyNames>
+                  <ns2:FirstNames>Llucia</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000024-V1-2">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Shafique</ns2:FamilyNames>
+                  <ns2:FirstNames>Abdullah</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000024-V1-3">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Kaas</ns2:FamilyNames>
+                  <ns2:FirstNames>Helene</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000024-V1-4">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Prener</ns2:FamilyNames>
+                  <ns2:FirstNames>Martin</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000024-V1-5">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Hageman Pinborg</ns2:FamilyNames>
+                  <ns2:FirstNames>Lars</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000024-V1-6">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Moos Knudsen</ns2:FamilyNames>
+                  <ns2:FirstNames>Gitte</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+            <ns2:Creator>
+              <ns2:Person id="Persons/PN000024-V1-7">
+                <ns2:PersonName>
+                  <ns2:FamilyNames>Ganz</ns2:FamilyNames>
+                  <ns2:FirstNames>Melanie</ns2:FirstNames>
+                </ns2:PersonName>
+              </ns2:Person>
+            </ns2:Creator>
+          </ns2:Creators>
+          <ns2:Description xml:lang="en">The PMG-BrainDrugs dataset is the first open polymicrogyria (PMG) dataset including patients across the full age range. Polymicrogyria is a malformation of cortical development characterised by abnormal cortical layering. The associated abnormalities are heterogeneous and can sometimes be difficult to detect.
+The dataset comprises 208 subjects, including 119 patients with radiologically confirmed PMG and 89 controls with negative findings. Each scanning session may include several anatomical imaging modalities (T1w, T2w, and T2* weighted, or FLAIR sequences). For 27 subjects, 2 or 3 time points are available. The release of this dataset includes minimally processed data (with only defacing applied) as well as manually segmented masks of PMG abnormalities. This dataset aims to bridge the gap between curated research datasets and the variability encountered in routine clinical practice. In doing so, it offers a valuable resource for developing and evaluating more robust and generalisable methods for the detection of polymicrogyria and related cortical malformations. (total size: 38.45 GB)</ns2:Description>
+          <ns2:Keyword xml:lang="en">polymicrogyria</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">BIDS</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">clinical acquisition</ns2:Keyword>
+          <ns2:Keyword xml:lang="en">epilepsy</ns2:Keyword>
+          <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
+          <ns2:Dates>
+            <ns2:Updated startDate="2026-06-17" />
+          </ns2:Dates>
+        </ns2:Product>
+      </metadata>
+    </record>
+  </ListRecords>
+</OAI-PMH>

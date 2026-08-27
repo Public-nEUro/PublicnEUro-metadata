@@ -1,0 +1,249 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "PN000016",
+  "name": "multimodal total-body source data 18F-FDG PET-CT-MRI",
+  "versions": [
+    {
+      "version": "V1",
+      "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000016%20multimodal%20total-body%20source%20data%2018F-FDG%20PET-CT-MRI/V1",
+      "description": "70min 18F-FDG Listmode and DICOM CT source files for 80 age and sex stratified healthy controls of the hedyPET cohort. Data is organized in the folder-structure needed for Siemens JSRecon (e7). (total size: 2593.18GB)",
+      "status": "active",
+      "statusSource": "inferred-default",
+      "retrieval": {
+        "mode": "online",
+        "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000016"
+      },
+      "duc": {
+        "profileVersion": "0.1.0",
+        "profileName": "PN000016 V1 Digital Use Conditions",
+        "ducVersion": "1.1.0",
+        "permissionMode": "All unstated conditions are Permitted",
+        "language": "eng",
+        "assets": [
+          {
+            "assetName": "multimodal total-body source data 18F-FDG PET-CT-MRI",
+            "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000016%20multimodal%20total-body%20source%20data%2018F-FDG%20PET-CT-MRI/V1",
+            "assetReferences": [
+              "https://doi.org/10.70883/JZJH3431"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "Regulatory jurisdiction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Data controller oversight"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory compliance"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "User authentication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Confidentiality"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data security"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Re-identification"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data redistribution"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          }
+        ],
+        "lastUpdated": "2025-10-30"
+      },
+      "ducProvenance": {
+        "mappingVersion": "1.0",
+        "mappingStatus": "machine-generated-unreviewed",
+        "sourceAgreement": {
+          "type": "Data User Agreement",
+          "url": "https://datacatalog.publicneuro.eu/dataset/PN000016%20multimodal%20total-body%20source%20data%2018F-FDG%20PET-CT-MRI/V1",
+          "authoritative": true,
+          "sha256": "971a4432c83aac82920ab7e7b23cd9b3702ac6fcf937de61e6fa708ab636fcaa"
+        },
+        "conditionEvidence": [
+          {
+            "conditionIndex": 0,
+            "mappingRule": "PN-DUC-JURISDICTION-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 1,
+            "mappingRule": "PN-DUC-CONTROLLER-001",
+            "sourceSections": [
+              "restrictions"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 2,
+            "mappingRule": "PN-DUC-LAW-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 3,
+            "mappingRule": "PN-DUC-AUTH-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 4,
+            "mappingRule": "PN-DUC-CONFIDENTIAL-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 5,
+            "mappingRule": "PN-DUC-SECURITY-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 6,
+            "mappingRule": "PN-DUC-REID-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          },
+          {
+            "conditionIndex": 7,
+            "mappingRule": "PN-DUC-REDISTRIBUTE-001",
+            "sourceSections": [
+              "terms"
+            ],
+            "confidence": "deterministic-pattern"
+          }
+        ]
+      },
+      "doi": "https://doi.org/10.70883/JZJH3431",
+      "lastUpdated": "2025-10-30",
+      "creators": [
+        {
+          "givenName": "Christian",
+          "familyName": "Hinge"
+        },
+        {
+          "givenName": "Frederikke",
+          "familyName": "Engel Høi-Hansen"
+        },
+        {
+          "givenName": "Rasmus",
+          "familyName": "Hvass Hansen"
+        },
+        {
+          "givenName": "Kirsten",
+          "familyName": "Korsholm"
+        },
+        {
+          "givenName": "Helle",
+          "familyName": "Hjorth Johannesen"
+        },
+        {
+          "givenName": "Elisabeth",
+          "familyName": "Albrech-Beste"
+        },
+        {
+          "givenName": "Eunice",
+          "familyName": "Sánchez Saxtoft"
+        },
+        {
+          "givenName": "Vibeke",
+          "familyName": "Jensen"
+        },
+        {
+          "givenName": "Christina",
+          "familyName": "Schulze"
+        },
+        {
+          "givenName": "Christina",
+          "familyName": "Mikkelsen"
+        },
+        {
+          "givenName": "Cyril",
+          "familyName": "Pernet"
+        },
+        {
+          "givenName": "Janna",
+          "familyName": "Nissen"
+        },
+        {
+          "givenName": "Sisse",
+          "familyName": "Rye Ostrowski"
+        },
+        {
+          "givenName": "Barbara",
+          "familyName": "Malene Fischer"
+        },
+        {
+          "givenName": "Claes",
+          "familyName": "Nøhr Ladefoged"
+        },
+        {
+          "givenName": "Flemming",
+          "familyName": "Littrup Andersen"
+        }
+      ],
+      "keywords": [
+        "PET",
+        "Control",
+        "18F-FDG",
+        "Whole-Body",
+        "CT",
+        "LAFOV",
+        "Listmode"
+      ]
+    }
+  ]
+}
