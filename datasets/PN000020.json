@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000020",
   "name": "Serotonine transporter imaging in MDMA or hallucinogenic drug users and non using controls",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000020%20Serotonine%20transporter%20imaging%20in%20MDMA%20or%20hallucinogenic%20drug%20users%20and%20non%20using%20controls/V1",
-      "description": "24 adult users of MDMA or hallucinogenic drugs and 21 nonusing controls were scanned with [11C]DASB PET. (total size: 5.58 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

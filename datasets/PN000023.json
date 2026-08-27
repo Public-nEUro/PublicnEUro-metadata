@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000023",
   "name": "Familial risk for affective disorders and serotonergic brain architecture",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000023%20Familial%20risk%20for%20affective%20disorders%20and%20serotonergic%20brain%20architecture/V1",
-      "description": "Nine individuals at high familial risk and 11 individuals at low risk for developing mood disorder were included and underwent Positron Emission Tomography. The participants were healthy twins with or without a co-twin history of mood disorder identified by linking information from the Danish Twin Register and the Danish Psychiatric Central Register. (total size: 1.26 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000014",
   "name": "multimodal total-body 18F-FDG PET-CT-MRI - static images",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000014%20multimodal%20total-body%2018F-FDG%20PET-CT-MRI%20-%20static%20images/V1",
-      "description": "Whole-body static 18F-FDG PET reconstructions, CT, and MRI for 80 age and sex stratified healthy controls of the hedyPET cohort. Derivatives include totalsegmentator segmentations, synthseg brain segmentations, and pipelines that contains images resampled (registered for MRI) to common spaces. (total size: 69.87 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

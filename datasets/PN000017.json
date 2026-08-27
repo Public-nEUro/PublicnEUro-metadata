@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000017",
   "name": "Serotonine transporter data in healthy and obese participants.",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000017%20Serotonine%20transporter%20data%20in%20healthy%20and%20obese%20participants/V1",
-      "description": "This dataset is a combination of studies ran under the same ethic approval, combining data from healthy individuals and obese patients. (total size: 12.26 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

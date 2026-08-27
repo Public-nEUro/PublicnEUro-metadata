@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000007",
   "name": "Leuven PET UCB-J dataset 3 in control participants",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000007%20Leuven%20PET%20UCB-J%20dataset%203%20in%20control%20participants/V1",
-      "description": "UCB-J in healthy volunteers: dynamic UCB-J PET baseline scans (60 - 90 min after injection), eASL, T1w and DWI (total size: 3.1GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

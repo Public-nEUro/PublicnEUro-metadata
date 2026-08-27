@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000019",
   "name": "Serotonine transporter PET data in healthy controls during bright-light therapy",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000019%20Serotonine%20transporter%20PET%20data%20in%20healthy%20controls%20during%20bright-light%20therapy/V1",
-      "description": "Dataset for PET imaging using the [11C]DASB tracer for the LYS study containing scans of 24 healthy men, before and after three weeks of bright light therapy. (total size: 12.17 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

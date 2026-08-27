@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000004",
   "name": "Closed Loop Sleep Motor Memory",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000004%20Closed%20Loop%20Sleep%20Motor%20Memory/V1",
-      "description": "Unraveling the Neurophysiological Correlates of Phase-Specific Enhancement of Motor Memory Consolidation via Slow-Wave Closed-Loop Targeted Memory Reactivation (total size: 81.0GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {
