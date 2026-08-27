@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000021",
   "name": "Serotonine transporter imaging in seasonal affective disorder",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000021%20Serotonine%20transporter%20imaging%20in%20seasonal%20affective%20disorder/V1",
-      "description": "The dataset is a subset of (11)C-DASB positron emission tomography scans that were conducted to quantify cerebral serotonin transporter binding; 23 healthy controls with low seasonality scores and 17 patients diagnosed with seasonal affective disorder were scanned in both summer and winter to investigate differences in cerebral serotonin transporter binding across groups and across seasons. (total size: 13.36 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

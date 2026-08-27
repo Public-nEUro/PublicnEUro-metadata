@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000015",
   "name": "multimodal total-body dynamic 18F-FDG PET-CT-MRI",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000015%20multimodal%20total-body%20dynamic%2018F-FDG%20PET-CT-MRI/V1",
-      "description": "Companion dataset for PN000014 (https://doi.org/10.70883/GIOX3828): 70min 18F-FDG dynamic nifti files and corresponding resampled CT, MRI, and segmentations for 80 age and sex stratified healthy controls of the hedyPET cohort. (total size: 212.17 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

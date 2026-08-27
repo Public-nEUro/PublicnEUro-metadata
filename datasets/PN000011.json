@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000011",
   "name": "A dataset of clinical pediatric brain MRI with and without motion correction",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000011%20A%20dataset%20of%20clinical%20pediatric%20brain%20MRI%20with%20and%20without%20motion%20correction/V1",
-      "description": "Pediatric patients recruited from the Copenhagen Capital Region.  Participants eligible for inclusion were children aged 4 to 11 years, referred for an elective, scheduled clinical cerebral MRI scan under GA. Children were excluded if they presented with an unstable medical condition or any contraindications compromising the safety of MRI—such as metal implants. Additional exclusion criteria included lack of fluency in Danish, significant visual or auditory impairments, or major physical or developmental challenges likely to interfere with participation in the experimental protocol. The number and type of images available for each patient vary but include a full cerebral clinical MRI protocol. The primary advantage of this dataset is the publication of clinically acquired MRI data with and without motion correction. Together with the image data, motion curves, expert image quality scores by a radiographer as well as automatic image quality scores based on reference-free image quality metrics are shared (total size: 4.2GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

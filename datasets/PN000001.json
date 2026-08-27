@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000001",
   "name": "OpenNeuroPET Phantoms",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000001%20OpenNeuroPET%20Phantoms/V1",
-      "description": "The PET Brain phantoms dataset is curated by OpenNeuroPET. This repository contains source data from PET scanners that need to be converted to nifti format, preferably following BIDS. An issue with ecat and DICOM data is that many tags are not mandatory and many values are not standardized making it difficult to harmonize the outputs of conversion, in particular side car json files. Here we collected many phantoms from different sites and scanners allowing to check the different header tags and values. This also allows validated conversion tools. Such test is performed via the code folder where one use the PET2BIDS library to do the conversion (which depends on dcm2niix for DICOM). Feel free to contact OpenNeuroPET to add your data from a scanner we have not tested. (total size: 0.6GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {
@@ -115,7 +114,6 @@
     {
       "version": "V2",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000001%20OpenNeuroPET%20Phantoms/V2",
-      "description": "The PET Brain phantoms dataset is curated by OpenNeuroPET. This repository contains source data from PET scanners that need to be converted to nifti format, preferably following BIDS. An issue with ecat and DICOM data is that many tags are not mandatory and many values are not standardized making it difficult to harmonize the outputs of conversion, in particular side car json files. Here we collected many phantoms from different sites and scanners allowing to check the different header tags and values. This also allows validated conversion tools. Such test is performed via the code folder where one use the PET2BIDS library to do the conversion (which depends on dcm2niix for DICOM). Feel free to contact OpenNeuroPET to add your data from a scanner we have not tested. (total size: 0.6GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

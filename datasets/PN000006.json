@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000006",
   "name": "Leuven PET UCB-J dataset 2 in control participants",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000006%20Leuven%20PET%20UCB-J%20dataset%202%20in%20control%20participants/V1",
-      "description": "UCB-J in healthy volunteers: dynamic UCB-J and FDG PET baseline scans (60 - 90 min after injection),  T1w and FLAIR (total size: 0.65GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

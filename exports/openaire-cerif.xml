@@ -83,7 +83,6 @@
             </ns2:Creator>
           </ns2:Creators>
           <ns2:License scheme="https://spdx.org/licenses">https://spdx.org/licenses/CC-BY-4.0</ns2:License>
-          <ns2:Description xml:lang="en">The PET Brain phantoms dataset is curated by OpenNeuroPET. This repository contains source data from PET scanners that need to be converted to nifti format, preferably following BIDS. An issue with ecat and DICOM data is that many tags are not mandatory and many values are not standardized making it difficult to harmonize the outputs of conversion, in particular side car json files. Here we collected many phantoms from different sites and scanners allowing to check the different header tags and values. This also allows validated conversion tools. Such test is performed via the code folder where one use the PET2BIDS library to do the conversion (which depends on dcm2niix for DICOM). Feel free to contact OpenNeuroPET to add your data from a scanner we have not tested. (total size: 0.6GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">Positron Emission Tomography</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">Brain</ns2:Keyword>
@@ -181,7 +180,6 @@
             </ns2:Creator>
           </ns2:Creators>
           <ns2:License scheme="https://spdx.org/licenses">https://spdx.org/licenses/CC-BY-4.0</ns2:License>
-          <ns2:Description xml:lang="en">The PET Brain phantoms dataset is curated by OpenNeuroPET. This repository contains source data from PET scanners that need to be converted to nifti format, preferably following BIDS. An issue with ecat and DICOM data is that many tags are not mandatory and many values are not standardized making it difficult to harmonize the outputs of conversion, in particular side car json files. Here we collected many phantoms from different sites and scanners allowing to check the different header tags and values. This also allows validated conversion tools. Such test is performed via the code folder where one use the PET2BIDS library to do the conversion (which depends on dcm2niix for DICOM). Feel free to contact OpenNeuroPET to add your data from a scanner we have not tested. (total size: 0.6GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">Positron Emission Tomography</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">Brain</ns2:Keyword>
@@ -270,7 +268,6 @@
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">The Aggression Project aimed to determine brain mechanisms underlying aggression using 5-HT1BR PET ([11C]AZ10419369) and MRI. Participants recruited included incarcerated violent offenders and healthy controls. (total size: 16.0GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">functional MRI</ns2:Keyword>
           <ns2:Keyword xml:lang="en">HCP-Young Adults</ns2:Keyword>
           <ns2:Keyword xml:lang="en">multiverse</ns2:Keyword>
@@ -330,7 +327,6 @@
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">While variability across participants or across acquisition instruments have been extensively studied in the neuroimaging literature the root causes of analytical variability remain an open question. Here, we share the derivatives from HCP-Young Adults dataset, including the statistical maps for 24 typical fMRI pipelines on 1080 participants. We share both individual and group results - for 1,000 groups of 50 participants - over 5 motor contrasts. (total size: 445.0GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">functional MRI</ns2:Keyword>
           <ns2:Keyword xml:lang="en">HCP-Young Adults</ns2:Keyword>
           <ns2:Keyword xml:lang="en">multiverse</ns2:Keyword>
@@ -374,7 +370,6 @@
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">Unraveling the Neurophysiological Correlates of Phase-Specific Enhancement of Motor Memory Consolidation via Slow-Wave Closed-Loop Targeted Memory Reactivation (total size: 81.0GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">sleep</ns2:Keyword>
           <ns2:Keyword xml:lang="en">motor learning</ns2:Keyword>
           <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
@@ -423,7 +418,6 @@
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">UCB-J in healthy volunteers: dynamic PET baseline scan (0-90 min), T1w and eASL (total size: 1.1GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">T1w</ns2:Keyword>
@@ -469,7 +463,6 @@
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">UCB-J in healthy volunteers: dynamic UCB-J and FDG PET baseline scans (60 - 90 min after injection),  T1w and FLAIR (total size: 0.65GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">T1w</ns2:Keyword>
@@ -532,7 +525,6 @@
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">UCB-J in healthy volunteers: dynamic UCB-J PET baseline scans (60 - 90 min after injection), eASL, T1w and DWI (total size: 3.1GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">T1w</ns2:Keyword>
@@ -587,7 +579,6 @@
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">Test-retest in healthy volunteers: dynamic UCB-J PET baseline scan (60 - 90 min after injection), dynamic PE2I PET baseline scan (50 - 70 min after injection), T1w  (total size: 1.8GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PE2I</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
@@ -657,9 +648,6 @@
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">Datasets with and without deliberate head movements for evaluating the performance of markerless prospective motion correction and selective reacquisition in a general clinical protocol for brain MRI  - Head motion is one of the most common sources of artefacts in brain MRI. In this study, we evaluate the performance of markerless prospective motion correction (PMC) and selective reacquisition in a complete clinical protocol for brain MRI, comparing acquisitions with and without instructed intentional head motion.MRI and head motion data were acquired between January and March 2021 from 22 healthy adults (16 females, 6 males) aged 19-36 (mean standard deviation: 23.5 4.3) years, recruited for the Cimbi database (www.cimbi.dk). The recruitment was performed by advertisement for different research projects, with approval by the Ethics Committee of Copenhagen and Frederiksberg, Denmark (protocol number H-KF-2006-20). Written informed consent was obtained from each participant. The MRI scan protocol consisted of six different 2D- and 3D-encoded sequences, which were completed by a different number of participants: 3D T1 MPR (n=22), 3D T2 dark fluid (FLAIR) (n=10), 2D T1 STIR (n=22), 2D T2 TSE (n=22), 2D T2* GRE (n=19) and 2D DWI (n=10). Note, the DWI data (ADC, TRACEW) is located under derivatives.Four scans were acquired for each sequence: two without intentional head motion (referred to as still) and two with a predefined nodding motion (nod). For the T1 MPR sequence, two additional scans with shaking motion were acquired (shake). The participants were instructed to perform two periods of nodding or shaking motion for 40 seconds during the middle of the acquisition, corresponding to the acquisition of the k-space center for the 3D-encoded sequences. The scans with and without PMC were acquired in the following order:- Still, no correction- Still, PMC- Nod motion, no correction (+ selective reacquisition)- Nod motion, PMC (+ selective reacquisition)- Shake motion, no correction (+ selective reacquisition) - ONLY MPRAGE- Shake motion, PMC (+ selective reacquisition) - ONLY MPRAGE. Note that _run-01 indicates the still scans, _run-02 indicates the nodding scans and _run-03 indicates the shaking scans. _rec-wore indicates a scan without reacquisition, _rec-wre indicates a scan with reacquisition. Nodding motion was chosen as the primary motion pattern based on results of a previous study (https:/www.frontiersin.org/articles/10.3389/fradi.2021.789632/full) , where nodding rotation was found to be significantly larger than the rotational components around the other axes for awake children. Rigid-body head motion was measured with the optical tracking system Tracoline (TracInnovations, Ballerup, Denmark).
-
-More details regarding the acquisition protocol can be seen in our preprint https:/psyarxiv.com/vzh4g. (total size: 1500.0GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">motion</ns2:Keyword>
           <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
           <ns2:Keyword xml:lang="en">K-space</ns2:Keyword>
@@ -709,7 +697,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">Test-retest in healthy volunteers: dynamic UCB-J PET baseline scan (60 - 100 min after injection), dynamic FDG PET baseline scan (30 - 50 min after injection), T1w (total size: 1.4GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
           <ns2:Keyword xml:lang="en">FDG</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
@@ -771,7 +758,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">Pediatric patients recruited from the Copenhagen Capital Region.  Participants eligible for inclusion were children aged 4 to 11 years, referred for an elective, scheduled clinical cerebral MRI scan under GA. Children were excluded if they presented with an unstable medical condition or any contraindications compromising the safety of MRI—such as metal implants. Additional exclusion criteria included lack of fluency in Danish, significant visual or auditory impairments, or major physical or developmental challenges likely to interfere with participation in the experimental protocol. The number and type of images available for each patient vary but include a full cerebral clinical MRI protocol. The primary advantage of this dataset is the publication of clinically acquired MRI data with and without motion correction. Together with the image data, motion curves, expert image quality scores by a radiographer as well as automatic image quality scores based on reference-free image quality metrics are shared (total size: 4.2GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">pediatric</ns2:Keyword>
           <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
           <ns2:Keyword xml:lang="en">motion correction</ns2:Keyword>
@@ -821,7 +807,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">The dataset contains 120 min dynamic scan starting with C11-UCBJ bolus along with T1w and T2w MRI data from people aged between 20 and 83 years old.</ns2:Description>
           <ns2:Keyword xml:lang="en">dynamic</ns2:Keyword>
           <ns2:Keyword xml:lang="en">UCBJ</ns2:Keyword>
           <ns2:Keyword xml:lang="en">11C</ns2:Keyword>
@@ -867,7 +852,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">Multimodal neuroimaging dataset from the Aarhus University UCB-J project including T1-weighted MRI, [11C]UCB-J PET, and FDG PET. The dataset includes healthy controls (young and older) and patients with Parkinson’s disease spectrum disorders (PD, DLB, PDD), organized in BIDS format. (total size: 2.63 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">Parkinson's disease</ns2:Keyword>
           <ns2:Keyword xml:lang="en">dementia with Lewy bodies</ns2:Keyword>
           <ns2:Keyword xml:lang="en">Parkinson's disease dementia</ns2:Keyword>
@@ -1031,7 +1015,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
             </ns2:Creator>
           </ns2:Creators>
           <ns2:License scheme="https://spdx.org/licenses">https://spdx.org/licenses/CC-BY-4.0</ns2:License>
-          <ns2:Description xml:lang="en">Whole-body static 18F-FDG PET reconstructions, CT, and MRI for 80 age and sex stratified healthy controls of the hedyPET cohort. Derivatives include totalsegmentator segmentations, synthseg brain segmentations, and pipelines that contains images resampled (registered for MRI) to common spaces. (total size: 69.87 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">CT</ns2:Keyword>
           <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
@@ -1190,7 +1173,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
             </ns2:Creator>
           </ns2:Creators>
           <ns2:License scheme="https://spdx.org/licenses">https://spdx.org/licenses/CC-BY-4.0</ns2:License>
-          <ns2:Description xml:lang="en">Companion dataset for PN000014 (https://doi.org/10.70883/GIOX3828): 70min 18F-FDG dynamic nifti files and corresponding resampled CT, MRI, and segmentations for 80 age and sex stratified healthy controls of the hedyPET cohort. (total size: 212.17 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">CT</ns2:Keyword>
           <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
@@ -1349,7 +1331,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">70min 18F-FDG Listmode and DICOM CT source files for 80 age and sex stratified healthy controls of the hedyPET cohort. Data is organized in the folder-structure needed for Siemens JSRecon (e7). (total size: 2593.18GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">Control</ns2:Keyword>
           <ns2:Keyword xml:lang="en">18F-FDG</ns2:Keyword>
@@ -1395,7 +1376,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">This dataset is a combination of studies ran under the same ethic approval, combining data from healthy individuals and obese patients. (total size: 12.26 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">DASB</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
@@ -1445,7 +1425,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">63 healthy female volunteers participated in this randomized (1:1), placebo-controlled double blind study of neurobiological and psychometrical signatures of ovarian sex hormone suppression. (total size: 39.54 GB)</ns2:Description>
           <ns4:Access>http://purl.org/coar/access_right/c_16ec</ns4:Access>
           <ns2:Dates>
             <ns2:Updated startDate="2026-04-10" />
@@ -1492,7 +1471,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">Dataset for PET imaging using the [11C]DASB tracer for the LYS study containing scans of 24 healthy men, before and after three weeks of bright light therapy. (total size: 12.17 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">DASB</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
@@ -1543,7 +1521,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">24 adult users of MDMA or hallucinogenic drugs and 21 nonusing controls were scanned with [11C]DASB PET. (total size: 5.58 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">MDMA</ns2:Keyword>
           <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
@@ -1609,7 +1586,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">The dataset is a subset of (11)C-DASB positron emission tomography scans that were conducted to quantify cerebral serotonin transporter binding; 23 healthy controls with low seasonality scores and 17 patients diagnosed with seasonal affective disorder were scanned in both summer and winter to investigate differences in cerebral serotonin transporter binding across groups and across seasons. (total size: 13.36 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">SAD</ns2:Keyword>
           <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
@@ -1659,7 +1635,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">Twelve patients with AD (average Mini Mental State Examination [MMSE]: 24) and 11 healthy age-matched subjects underwent positron emission tomography (total size: 2.87 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">Alzhrimers Disease</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">serotonin</ns2:Keyword>
@@ -1701,7 +1676,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">Nine individuals at high familial risk and 11 individuals at low risk for developing mood disorder were included and underwent Positron Emission Tomography. The participants were healthy twins with or without a co-twin history of mood disorder identified by linking information from the Danish Twin Register and the Danish Psychiatric Central Register. (total size: 1.26 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">Sertonin</ns2:Keyword>
           <ns2:Keyword xml:lang="en">PET</ns2:Keyword>
           <ns2:Keyword xml:lang="en">Healthy</ns2:Keyword>
@@ -1783,8 +1757,6 @@ More details regarding the acquisition protocol can be seen in our preprint http
               </ns2:Person>
             </ns2:Creator>
           </ns2:Creators>
-          <ns2:Description xml:lang="en">The PMG-BrainDrugs dataset is the first open polymicrogyria (PMG) dataset including patients across the full age range. Polymicrogyria is a malformation of cortical development characterised by abnormal cortical layering. The associated abnormalities are heterogeneous and can sometimes be difficult to detect.
-The dataset comprises 208 subjects, including 119 patients with radiologically confirmed PMG and 89 controls with negative findings. Each scanning session may include several anatomical imaging modalities (T1w, T2w, and T2* weighted, or FLAIR sequences). For 27 subjects, 2 or 3 time points are available. The release of this dataset includes minimally processed data (with only defacing applied) as well as manually segmented masks of PMG abnormalities. This dataset aims to bridge the gap between curated research datasets and the variability encountered in routine clinical practice. In doing so, it offers a valuable resource for developing and evaluating more robust and generalisable methods for the detection of polymicrogyria and related cortical malformations. (total size: 38.45 GB)</ns2:Description>
           <ns2:Keyword xml:lang="en">polymicrogyria</ns2:Keyword>
           <ns2:Keyword xml:lang="en">MRI</ns2:Keyword>
           <ns2:Keyword xml:lang="en">BIDS</ns2:Keyword>

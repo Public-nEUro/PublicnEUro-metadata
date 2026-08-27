@@ -13,6 +13,7 @@ from urllib.parse import quote
 
 
 STATUSES = {"active", "archived", "retired", "withdrawn", "superseded"}
+SCHEMA_VERSION = "1.2"
 RETRIEVAL_MODES = {
     "active": "online",
     "archived": "cold_archive",
@@ -223,7 +224,6 @@ def derive_record(source: dict, source_ref: dict | None = None) -> dict:
     record = {
         "version": version,
         "catalogueUrl": catalogue_url,
-        "description": source.get("description", ""),
         "status": status,
         "statusSource": status_source,
         "retrieval": retrieval_for(status, source),
@@ -232,6 +232,10 @@ def derive_record(source: dict, source_ref: dict | None = None) -> dict:
     }
     if source_ref:
         record["source"] = source_ref
+    if source.get("status_note"):
+        record["statusNote"] = source["status_note"].strip()
+    if source.get("replacement"):
+        record["replacement"] = normalized_doi_url(source["replacement"])
     if record["retrieval"].get("url"):
         record["retrieval"]["url"] = absolute_access_url(record["retrieval"]["url"])
     for key, target in (("doi", "doi"), ("dateModified", "lastUpdated")):
@@ -285,7 +289,7 @@ def catalogue_records(catalogue: Path) -> tuple[list[dict], dict]:
         version_sources = [root_dataset(path, code) for path in versions]
         version_records = [value for value, _ in version_sources]
         records.append({
-            "schemaVersion": "1.1",
+            "schemaVersion": SCHEMA_VERSION,
             "datasetId": code,
             "name": version_records[-1].get("name", item["dataset_id"]),
             "versions": [
@@ -336,7 +340,7 @@ def incremental_catalogue_records(catalogue: Path, output: Path) -> tuple[list[d
             source_names.append(source.get("name"))
         latest_name = source_names[-1] if source_names and source_names[-1] else old_dataset.get("name")
         records.append({
-            "schemaVersion": "1.1",
+            "schemaVersion": SCHEMA_VERSION,
             "datasetId": code,
             "name": latest_name or item["dataset_id"],
             "versions": versions,
@@ -410,8 +414,6 @@ def write_cerif(records: list[dict], output: Path, response_date: str) -> None:
             agreement_type = version["ducProvenance"]["sourceAgreement"]["type"]
             if re.sub(r"[^a-z0-9]", "", agreement_type.lower()).startswith("ccby"):
                 add(product, CERIF, "License", "https://spdx.org/licenses/CC-BY-4.0", scheme="https://spdx.org/licenses")
-            if version["description"]:
-                add(product, CERIF, "Description", version["description"], **{f"{{{XML}}}lang": "en"})
             for keyword in version.get("keywords", []):
                 add(product, CERIF, "Keyword", keyword, **{f"{{{XML}}}lang": "en"})
             access = "c_14cb" if version["status"] == "withdrawn" else "c_16ec"

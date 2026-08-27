@@ -20,7 +20,6 @@ class GenerateTests(unittest.TestCase):
                 "dataset_id": "PN000001 Example",
                 "dataset_version": "V1",
                 "name": "Example",
-                "description": "Description",
             },
             {
                 "path": "metadata/PN000001 Example/V1/abc/0123456789abcdef0123456789abc.json",
@@ -34,7 +33,6 @@ class GenerateTests(unittest.TestCase):
             "dataset_id": "PN000001 Example",
             "dataset_version": "V1",
             "name": "Example",
-            "description": "Description",
         })
         self.assertEqual(record["status"], "active")
         self.assertEqual(record["statusSource"], "inferred-default")
@@ -45,7 +43,6 @@ class GenerateTests(unittest.TestCase):
             "dataset_id": "PN000001 Example",
             "dataset_version": "V1",
             "name": "Example",
-            "description": "Description",
             "status": "withdrawn",
             "download_url": "https://example.org/download",
             "access_request_contact": "person@example.org",
@@ -61,6 +58,30 @@ class GenerateTests(unittest.TestCase):
             "mode": "external",
             "contact": "controller@example.org"
         })
+
+    def test_structured_lifecycle_details_are_exported(self):
+        withdrawn = derive_record({
+            "dataset_id": "PN000001 Example",
+            "dataset_version": "V1",
+            "name": "Example",
+            "status": "withdrawn",
+            "status_note": "Withdrawn at the controller's request",
+        })
+        self.assertEqual(
+            withdrawn["statusNote"], "Withdrawn at the controller's request"
+        )
+        self.assertNotIn("description", withdrawn)
+
+        superseded = derive_record({
+            "dataset_id": "PN000001 Example",
+            "dataset_version": "V1",
+            "name": "Example",
+            "status": "superseded",
+            "replacement": "10.1234/current",
+        })
+        self.assertEqual(
+            superseded["replacement"], "https://doi.org/10.1234/current"
+        )
 
     def test_doi_variants_are_normalized(self):
         self.assertEqual(
@@ -147,7 +168,7 @@ class GenerateTests(unittest.TestCase):
                 "dataset_id": "PN000001 Example",
                 "dataset_version": "V1",
                 "name": "Example",
-                "description": "Original description",
+                "status": "active",
             }
             source_text = json.dumps(source)
             source_path.write_text(source_text, encoding="utf-8")
@@ -161,7 +182,7 @@ class GenerateTests(unittest.TestCase):
             }), encoding="utf-8")
             output.mkdir()
             existing = {
-                "schemaVersion": "1.1",
+                "schemaVersion": "1.2",
                 "datasetId": "PN000001",
                 "name": "Example",
                 "versions": [{
@@ -170,19 +191,20 @@ class GenerateTests(unittest.TestCase):
                         "path": source_path.relative_to(catalogue).as_posix(),
                         "sha256": hashlib.sha256(source_text.encode()).hexdigest(),
                     },
-                    "description": "Preserved marker",
+                    "statusSource": "preserved-marker",
                 }],
             }
             (output / "PN000001.json").write_text(json.dumps(existing), encoding="utf-8")
 
             records, _ = incremental_catalogue_records(catalogue, output)
-            self.assertEqual(records[0]["versions"][0]["description"], "Preserved marker")
+            self.assertEqual(records[0]["versions"][0]["statusSource"], "preserved-marker")
 
-            source["description"] = "Updated description"
+            source["status"] = "withdrawn"
+            source["status_note"] = "Controller request"
             source_path.write_text(json.dumps(source), encoding="utf-8")
             records, _ = incremental_catalogue_records(catalogue, output)
             refreshed = records[0]["versions"][0]
-            self.assertEqual(refreshed["description"], "Updated description")
+            self.assertEqual(refreshed["statusNote"], "Controller request")
             self.assertNotEqual(
                 refreshed["source"]["sha256"],
                 existing["versions"][0]["source"]["sha256"],

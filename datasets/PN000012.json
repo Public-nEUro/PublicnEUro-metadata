@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000012",
   "name": "PET UCB-J in healthy adult participants across the life span",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000012%20PET%20UCB-J%20in%20healthy%20adult%20participants%20across%20the%20life%20span/V1",
-      "description": "The dataset contains 120 min dynamic scan starting with C11-UCBJ bolus along with T1w and T2w MRI data from people aged between 20 and 83 years old.",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

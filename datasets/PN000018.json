@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000018",
   "name": "Gonadotrophin releasing hormone agonist (GnRHa) sex-hormone manipulation model of risk for depression",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000018%20Gonadotrophin%20releasing%20hormone%20agonist%20%28GnRHa%29%20sex-hormone%20manipulation%20model%20of%20risk%20for%20depression/V1",
-      "description": "63 healthy female volunteers participated in this randomized (1:1), placebo-controlled double blind study of neurobiological and psychometrical signatures of ovarian sex hormone suppression. (total size: 39.54 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

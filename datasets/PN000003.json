@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000003",
   "name": "HCP multipipelines",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000003%20HCP%20multipipelines/V1",
-      "description": "While variability across participants or across acquisition instruments have been extensively studied in the neuroimaging literature the root causes of analytical variability remain an open question. Here, we share the derivatives from HCP-Young Adults dataset, including the statistical maps for 24 typical fMRI pipelines on 1080 participants. We share both individual and group results - for 1,000 groups of 50 participants - over 5 motor contrasts. (total size: 445.0GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

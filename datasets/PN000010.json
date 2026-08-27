@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000010",
   "name": "Leuven PET UCB-J dataset 5 in control participants",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000010%20Leuven%20PET%20UCB-J%20dataset%205%20in%20control%20participants/V1",
-      "description": "Test-retest in healthy volunteers: dynamic UCB-J PET baseline scan (60 - 100 min after injection), dynamic FDG PET baseline scan (30 - 50 min after injection), T1w (total size: 1.4GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

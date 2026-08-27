@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000016",
   "name": "multimodal total-body source data 18F-FDG PET-CT-MRI",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000016%20multimodal%20total-body%20source%20data%2018F-FDG%20PET-CT-MRI/V1",
-      "description": "70min 18F-FDG Listmode and DICOM CT source files for 80 age and sex stratified healthy controls of the hedyPET cohort. Data is organized in the folder-structure needed for Siemens JSRecon (e7). (total size: 2593.18GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

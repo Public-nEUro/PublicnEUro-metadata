@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000013",
   "name": "Aarhus University (PACE) UCBJ cohort ",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000013%20Aarhus%20University%20%28PACE%29%20UCBJ%20cohort/V1",
-      "description": "Multimodal neuroimaging dataset from the Aarhus University UCB-J project including T1-weighted MRI, [11C]UCB-J PET, and FDG PET. The dataset includes healthy controls (young and older) and patients with Parkinson’s disease spectrum disorders (PD, DLB, PDD), organized in BIDS format. (total size: 2.63 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

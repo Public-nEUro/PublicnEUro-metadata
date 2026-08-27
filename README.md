@@ -77,6 +77,8 @@ diverge later.
 | `duc` | DUC 1.1-compatible machine-readable conditions profile. |
 | `ducProvenance` | PublicnEUro mapping, source-agreement and review metadata kept outside the standard DUC object. |
 | `source` | Catalogue-relative path and SHA-256 of the exact dataset JSON used to generate the version. |
+| `statusNote` | Concise lifecycle explanation, required for withdrawn records. |
+| `replacement` | Persistent URL of the replacement for a superseded record. |
 | `catalogueUrl` | Human-readable, authoritative dataset landing page. |
 | `doi` | Persistent dataset-version identifier. |
 
@@ -177,7 +179,7 @@ To change or add a mapping, edit `mappings/dua_to_duc.json`, increment its
 | archived | cold_archive | PublicnEUro holds the data in cold storage; retrieval is delayed. |
 | retired | external | PublicnEUro retains metadata but directs requests to the data controller. |
 | withdrawn | unavailable | Data access and contact actions are intentionally unavailable. |
-| superseded | online | The version remains accessible; its description identifies the successor. |
+| superseded | online | The version remains accessible; `replacement` identifies its successor. |
 
 The human-readable Data User Agreement remains authoritative. The `duc`
 object is a structured summary, not a replacement for the agreement.

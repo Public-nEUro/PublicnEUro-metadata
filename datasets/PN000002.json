@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000002",
   "name": "Aggression Project",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000002%20Aggression%20Project/V1",
-      "description": "The Aggression Project aimed to determine brain mechanisms underlying aggression using 5-HT1BR PET ([11C]AZ10419369) and MRI. Participants recruited included incarcerated violent offenders and healthy controls. (total size: 16.0GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {

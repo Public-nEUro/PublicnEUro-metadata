@@ -1,12 +1,11 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "datasetId": "PN000022",
   "name": "Serotonergic brain architecture of early Alzheimers Disease.",
   "versions": [
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000022%20Serotonergic%20brain%20architecture%20of%20early%20Alzheimers%20Disease/V1",
-      "description": "Twelve patients with AD (average Mini Mental State Examination [MMSE]: 24) and 11 healthy age-matched subjects underwent positron emission tomography (total size: 2.87 GB)",
       "status": "active",
       "statusSource": "inferred-default",
       "retrieval": {
