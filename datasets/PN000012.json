@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000012",
   "name": "PET UCB-J in healthy adult participants across the life span",
   "versions": [
@@ -199,6 +199,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000012 PET UCB-J in healthy adult participants across the life span/V1/91a/a3adcd025f710a582deb74df6031e.json",
+        "sha256": "0a04077667de6fedb8f4ec68ea5d5918903503e2ec134dddbd70de2c7af94c3e"
       },
       "doi": "https://doi.org/10.70883/NRUJ1547",
       "lastUpdated": "2026-04-10",

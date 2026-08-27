@@ -6,7 +6,7 @@
   "additionalProperties": false,
   "required": ["schemaVersion", "datasetId", "name", "versions"],
   "properties": {
-    "schemaVersion": {"const": "1.0"},
+    "schemaVersion": {"const": "1.1"},
     "datasetId": {"pattern": "^PN[0-9]{6}$"},
     "name": {"type": "string", "minLength": 1},
     "versions": {
@@ -19,9 +19,10 @@
     "version": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["version", "status", "statusSource", "retrieval", "duc", "ducProvenance", "catalogueUrl", "description"],
+      "required": ["version", "source", "status", "statusSource", "retrieval", "duc", "ducProvenance", "catalogueUrl", "description"],
       "properties": {
         "version": {"pattern": "^V[0-9]+$"},
+        "source": {"$ref": "#/$defs/source"},
         "doi": {"type": "string", "format": "uri"},
         "catalogueUrl": {"type": "string", "format": "uri"},
         "description": {"type": "string"},
@@ -75,6 +76,18 @@
           }
         },
         "keywords": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^metadata/.+/V[0-9]+/[a-f0-9]{3}/[a-f0-9]{29}\\.json$"
+        },
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
       }
     },
     "condition": {

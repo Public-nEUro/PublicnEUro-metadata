@@ -1,9 +1,34 @@
+import hashlib
+import json
+import tempfile
 import unittest
+from pathlib import Path
 
-from scripts.generate import derive_record, duc_for, normalized_doi_url, retrieval_for
+from scripts.generate import (
+    derive_record,
+    duc_for,
+    incremental_catalogue_records,
+    normalized_doi_url,
+    retrieval_for,
+)
 
 
 class GenerateTests(unittest.TestCase):
+    def test_source_reference_is_included(self):
+        record = derive_record(
+            {
+                "dataset_id": "PN000001 Example",
+                "dataset_version": "V1",
+                "name": "Example",
+                "description": "Description",
+            },
+            {
+                "path": "metadata/PN000001 Example/V1/abc/0123456789abcdef0123456789abc.json",
+                "sha256": "0" * 64,
+            },
+        )
+        self.assertEqual(record["source"]["sha256"], "0" * 64)
+
     def test_missing_status_is_active(self):
         record = derive_record({
             "dataset_id": "PN000001 Example",
@@ -106,6 +131,62 @@ class GenerateTests(unittest.TestCase):
         self.assertEqual(provenance["sourceAgreement"]["type"], "CCBY4.0")
         self.assertNotIn("sha256", provenance["sourceAgreement"])
         self.assertEqual(profile["conditions"][0]["conditionTerm"]["label"], "Attribution")
+
+    def test_incremental_reuses_unchanged_source_and_refreshes_changed_source(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            catalogue = root / "catalogue"
+            output = root / "datasets"
+            source_path = (
+                catalogue / "metadata" / "PN000001 Example" / "V1" /
+                "abc" / "0123456789abcdef0123456789abc.json"
+            )
+            source_path.parent.mkdir(parents=True)
+            source = {
+                "type": "dataset",
+                "dataset_id": "PN000001 Example",
+                "dataset_version": "V1",
+                "name": "Example",
+                "description": "Original description",
+            }
+            source_text = json.dumps(source)
+            source_path.write_text(source_text, encoding="utf-8")
+            super_path = catalogue / "metadata" / "super" / "abc" / "super.json"
+            super_path.parent.mkdir(parents=True)
+            super_path.write_text(json.dumps({
+                "subdatasets": [{
+                    "dataset_id": "PN000001 Example",
+                    "dataset_path": "PN000001 Example",
+                }]
+            }), encoding="utf-8")
+            output.mkdir()
+            existing = {
+                "schemaVersion": "1.1",
+                "datasetId": "PN000001",
+                "name": "Example",
+                "versions": [{
+                    "version": "V1",
+                    "source": {
+                        "path": source_path.relative_to(catalogue).as_posix(),
+                        "sha256": hashlib.sha256(source_text.encode()).hexdigest(),
+                    },
+                    "description": "Preserved marker",
+                }],
+            }
+            (output / "PN000001.json").write_text(json.dumps(existing), encoding="utf-8")
+
+            records, _ = incremental_catalogue_records(catalogue, output)
+            self.assertEqual(records[0]["versions"][0]["description"], "Preserved marker")
+
+            source["description"] = "Updated description"
+            source_path.write_text(json.dumps(source), encoding="utf-8")
+            records, _ = incremental_catalogue_records(catalogue, output)
+            refreshed = records[0]["versions"][0]
+            self.assertEqual(refreshed["description"], "Updated description")
+            self.assertNotEqual(
+                refreshed["source"]["sha256"],
+                existing["versions"][0]["source"]["sha256"],
+            )
 
 
 if __name__ == "__main__":

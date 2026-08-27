@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000015",
   "name": "multimodal total-body dynamic 18F-FDG PET-CT-MRI",
   "versions": [
@@ -57,6 +57,10 @@
             "confidence": "deterministic-license"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000015 multimodal total-body dynamic 18F-FDG PET-CT-MRI/V1/69d/12fb56f4278f63758113be5acbac9.json",
+        "sha256": "4c3743d0642a5fdf75250b756c031517c7929384cfc48a69615811d3b5939693"
       },
       "doi": "https://doi.org/10.70883/UYAG3430",
       "lastUpdated": "2025-10-30",

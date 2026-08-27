@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000023",
   "name": "Familial risk for affective disorders and serotonergic brain architecture",
   "versions": [
@@ -199,6 +199,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000023 Familial risk for affective disorders and serotonergic brain architecture/V1/828/0bc224e8aa29709efde03958ebb75.json",
+        "sha256": "d237026ab547f97048ab6c66cb113c09ba9052a3383158d9f025fe7fca9fa907"
       },
       "doi": "https://doi.org/10.70883/NRUJ1547",
       "lastUpdated": "2026-04-10",

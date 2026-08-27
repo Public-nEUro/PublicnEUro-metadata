@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000021",
   "name": "Serotonine transporter imaging in seasonal affective disorder",
   "versions": [
@@ -199,6 +199,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000021 Serotonine transporter imaging in seasonal affective disorder/V1/2d9/3fe2a047d8bb31b66d43d0466e694.json",
+        "sha256": "5bff0f81b6f0152b4a238810b7b34566a491d5c56511a18c29e50211b90b654d"
       },
       "doi": "https://doi.org/10.70883/FRBP6839",
       "lastUpdated": "2026-04-10",

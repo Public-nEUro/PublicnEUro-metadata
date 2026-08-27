@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000013",
   "name": "Aarhus University (PACE) UCBJ cohort ",
   "versions": [
@@ -121,6 +121,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000013 Aarhus University (PACE) UCBJ cohort/V1/d07/3c4bbc869de3e12cd66f0a63c0873.json",
+        "sha256": "e20d6b1077efa5686ed363c21b655f4d1d8783eedfaa5f95c3edcd94768fb556"
       },
       "doi": "https://doi.org/10.70883/PPNJ4476",
       "lastUpdated": "2022-03-01",

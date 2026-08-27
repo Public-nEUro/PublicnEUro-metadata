@@ -76,6 +76,7 @@ diverge later.
 | `retrieval.contact` | Data-controller contact for externally held data, when applicable. |
 | `duc` | DUC 1.1-compatible machine-readable conditions profile. |
 | `ducProvenance` | PublicnEUro mapping, source-agreement and review metadata kept outside the standard DUC object. |
+| `source` | Catalogue-relative path and SHA-256 of the exact dataset JSON used to generate the version. |
 | `catalogueUrl` | Human-readable, authoritative dataset landing page. |
 | `doi` | Persistent dataset-version identifier. |
 
@@ -144,12 +145,20 @@ Place a DataCatalogue checkout next to this repository, then run:
 
 ```bash
 python scripts/generate.py --catalogue ../DataCatalogue
+python scripts/generate.py --catalogue ../DataCatalogue --incremental
 python -m unittest discover -s tests
 uv run --with 'jsonschema[format]' python scripts/validate.py
 ```
 
 Generated files are deterministic. CI regenerates them from the current
 DataCatalogue default branch and fails when committed output is stale.
+
+Incremental generation reads each existing version's `source.path`, compares
+its current content with `source.sha256`, and regenerates only changed records.
+New datasets and versions are discovered from the catalogue index. The README
+and XML exports are always rebuilt from the complete local record set. Use a
+full generation after changing generator or DUA-to-DUC mapping logic; CI always
+uses the full mode as the authoritative reproducibility check.
 
 To inspect one profile:
 

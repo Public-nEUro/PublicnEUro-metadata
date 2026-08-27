@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000010",
   "name": "Leuven PET UCB-J dataset 5 in control participants",
   "versions": [
@@ -152,6 +152,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000010 Leuven PET UCB-J dataset 5 in control participants/V1/c07/de343398e25b0f4d9b918d1916528.json",
+        "sha256": "2bcc6584973eccfad2a9e9f87866b767b3241df9b7ab764a2aceaee4f35dedfd"
       },
       "doi": "https://doi.org/10.70883/WSYQ4663",
       "lastUpdated": "2025-09-22",

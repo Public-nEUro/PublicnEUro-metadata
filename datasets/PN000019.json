@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000019",
   "name": "Serotonine transporter PET data in healthy controls during bright-light therapy",
   "versions": [
@@ -199,6 +199,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000019 Serotonine transporter PET data in healthy controls during bright-light therapy/V1/0eb/32d00db068601557720888c39ad26.json",
+        "sha256": "845b426700cd0ef8e6c64e77d0ae19de0c2437a4ef5fe596f1bf93bb2426d3b5"
       },
       "doi": "https://doi.org/10.70883/JEKA8722",
       "lastUpdated": "2026-04-10",

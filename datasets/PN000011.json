@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000011",
   "name": "A dataset of clinical pediatric brain MRI with and without motion correction",
   "versions": [
@@ -185,6 +185,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000011 A dataset of clinical pediatric brain MRI with and without motion correction/V1/762/ba25e8e476c31fd7987240097ee7e.json",
+        "sha256": "15912806d8aa3ce0663f63e7f407a6f60e0aa3eec13d42cd72f49ba437e988e3"
       },
       "doi": "https://doi.org/10.70883/VMIF5895",
       "lastUpdated": "2025-09-15",

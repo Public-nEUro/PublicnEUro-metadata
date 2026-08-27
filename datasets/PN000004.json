@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000004",
   "name": "Closed Loop Sleep Motor Memory",
   "versions": [
@@ -137,6 +137,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000004 Closed Loop Sleep Motor Memory/V1/dbc/a5696b28a02db3d22cd2c8bc5421f.json",
+        "sha256": "dd81c5ce9546866b562de6c0f53a79e0feb44448a615857ee9aa75e398ad9a52"
       },
       "doi": "https://doi.org/10.70883/QXBH2876",
       "lastUpdated": "2025-02-15",

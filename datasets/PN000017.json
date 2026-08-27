@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000017",
   "name": "Serotonine transporter data in healthy and obese participants.",
   "versions": [
@@ -199,6 +199,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000017 Serotonine transporter data in healthy and obese participants/V1/ff9/8d5853d574da303bc81ce7cd9491f.json",
+        "sha256": "2f8e92a81cf3860876802220e6921525b3584b24e7b43575c995e510f8e855dc"
       },
       "doi": "https://doi.org/10.70883/GBWN3773",
       "lastUpdated": "2026-04-10",

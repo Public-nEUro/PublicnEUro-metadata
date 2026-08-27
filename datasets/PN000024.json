@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000024",
   "name": "A clinical brain MRI dataset of polymicrogyria in patients suspected of epilepsy",
   "versions": [
@@ -199,6 +199,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000024 A clinical brain MRI dataset of polymicrogyria in patients suspected of epilepsy/V1/0f6/dae9497baac3b9225bed20df33485.json",
+        "sha256": "eaa825b84cd54deda017b360b80bd9613f8698d3a624d2b766bee41753109c4f"
       },
       "doi": "https://doi.org/10.70883/GBSQ9852",
       "lastUpdated": "2026-06-17",

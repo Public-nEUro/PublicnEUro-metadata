@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000001",
   "name": "OpenNeuroPET Phantoms",
   "versions": [
@@ -58,6 +58,10 @@
             "confidence": "deterministic-license"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000001 OpenNeuroPET Phantoms/V1/ea2/afa20a9d8b1785cf6953488e68f49.json",
+        "sha256": "c23032a2c792405fe1fff43e42b9b8ab7829244e619544221cbbfc0dcdd8b96b"
       },
       "doi": "https://doi.org/10.70883/IGQP1334",
       "lastUpdated": "2024-06-02",
@@ -163,6 +167,10 @@
             "confidence": "deterministic-license"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000001 OpenNeuroPET Phantoms/V2/99e/ec0a982887a1134e9df1232b86fe4.json",
+        "sha256": "3a2c4fb236d7cc69036d46505b363a39fd2ce60bc9dda5ee9926f87541a16eab"
       },
       "doi": "https://doi.org/10.70883/RGNV3768",
       "lastUpdated": "2025-11-14",
