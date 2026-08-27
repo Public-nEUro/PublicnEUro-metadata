@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000014",
   "name": "multimodal total-body 18F-FDG PET-CT-MRI - static images",
   "versions": [
@@ -57,6 +57,10 @@
             "confidence": "deterministic-license"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000014 multimodal total-body 18F-FDG PET-CT-MRI - static images/V1/0dd/d57b9546a03a5b9a3d0f74e5aed54.json",
+        "sha256": "1b259f6e2a04470bb6fe50c693889ea2de7f5b22928ef97195f2ec3732c2c85b"
       },
       "doi": "https://doi.org/10.70883/GIOX3828",
       "lastUpdated": "2025-10-30",

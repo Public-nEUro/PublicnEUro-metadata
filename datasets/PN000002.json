@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000002",
   "name": "Aggression Project",
   "versions": [
@@ -185,6 +185,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000002 Aggression Project/V1/255/25f67e211d6f69622eb3eea66807c.json",
+        "sha256": "aa733e14b7b90c2eac49a0507d32e7faae093f8dafceca9a3bf3e8bdbff6cd6c"
       },
       "doi": "https://doi.org/10.70883/DEYZ5967",
       "lastUpdated": "2024-09-15",

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000020",
   "name": "Serotonine transporter imaging in MDMA or hallucinogenic drug users and non using controls",
   "versions": [
@@ -199,6 +199,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000020 Serotonine transporter imaging in MDMA or hallucinogenic drug users and non using controls/V1/58d/5465457f9ecf8b7505c703cbaa7e4.json",
+        "sha256": "17d2dd8bae79baf8f296616f4dd7d8c5dcf1af07fc62a5d1f9cf6c40b22dd06d"
       },
       "doi": "https://doi.org/10.70883/ZKCF9211",
       "lastUpdated": "2026-04-10",

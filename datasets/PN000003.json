@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000003",
   "name": "HCP multipipelines",
   "versions": [
@@ -155,6 +155,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000003 HCP multipipelines/V1/976/cc0c12462a182d194b09aae50a2f2.json",
+        "sha256": "701c2045d5d9be17bda73f805968d87d1d814ec94ca4ebbef1f18ec6941ec4f6"
       },
       "doi": "https://doi.org/10.70883/GTKK1541",
       "lastUpdated": "2024-10-02",

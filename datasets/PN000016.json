@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000016",
   "name": "multimodal total-body source data 18F-FDG PET-CT-MRI",
   "versions": [
@@ -166,6 +166,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000016 multimodal total-body source data 18F-FDG PET-CT-MRI/V1/af9/a5be9720355cc778151a001e87e7f.json",
+        "sha256": "e96bab8e4f369202d3677253e9c845450a5a422813b644eb91de1d86921b2e5b"
       },
       "doi": "https://doi.org/10.70883/JZJH3431",
       "lastUpdated": "2025-10-30",

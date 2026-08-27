@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000022",
   "name": "Serotonergic brain architecture of early Alzheimers Disease.",
   "versions": [
@@ -199,6 +199,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000022 Serotonergic brain architecture of early Alzheimers Disease/V1/616/0530490e1fddac5149de2e6bf26a5.json",
+        "sha256": "2359c75b005e4a72013d2020c25f1810d6f4542097bb97ecb2bbe55a0e5c3886"
       },
       "doi": "https://doi.org/10.70883/MRPF9876",
       "lastUpdated": "2026-04-10",

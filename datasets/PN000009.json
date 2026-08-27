@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "datasetId": "PN000009",
   "name": "Markerless Prospective Motion Correction",
   "versions": [
@@ -200,6 +200,10 @@
             "confidence": "deterministic-pattern"
           }
         ]
+      },
+      "source": {
+        "path": "metadata/PN000009 Markerless Prospective Motion Correction/V1/3e9/62a7fef132feda6e053d09d73788d.json",
+        "sha256": "83b7f534b72645715b35dea612243e281394ca0150e23e9fdf5be9dee97c5515"
       },
       "doi": "https://doi.org/10.70883/QBVI3432",
       "lastUpdated": "2025-06-18",

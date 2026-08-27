@@ -203,7 +203,14 @@ def normalized_url(value: str) -> str:
     return re.sub(r"^https:/([^/])", r"https://\1", value)
 
 
-def derive_record(source: dict) -> dict:
+def source_reference(path: Path, catalogue: Path) -> dict:
+    return {
+        "path": path.relative_to(catalogue).as_posix(),
+        "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+    }
+
+
+def derive_record(source: dict, source_ref: dict | None = None) -> dict:
     status_source = "catalogue" if source.get("status") else "inferred-default"
     status = source.get("status", "active")
     if status not in STATUSES:
@@ -223,6 +230,8 @@ def derive_record(source: dict) -> dict:
         "duc": duc,
         "ducProvenance": duc_provenance,
     }
+    if source_ref:
+        record["source"] = source_ref
     if record["retrieval"].get("url"):
         record["retrieval"]["url"] = absolute_access_url(record["retrieval"]["url"])
     for key, target in (("doi", "doi"), ("dateModified", "lastUpdated")):
@@ -246,35 +255,91 @@ def load_json(path: Path) -> dict:
         return json.load(stream)
 
 
-def root_dataset(version_dir: Path, expected_code: str) -> dict:
+def root_dataset(version_dir: Path, expected_code: str) -> tuple[dict, Path]:
     candidates = []
     for path in version_dir.glob("*/*.json"):
         value = load_json(path)
         if value.get("type") == "dataset" and value.get("dataset_id", "").startswith(expected_code):
-            candidates.append(value)
-    exact = [d for d in candidates if dataset_code(d["dataset_id"]) == expected_code]
+            candidates.append((value, path))
+    exact = [item for item in candidates if dataset_code(item[0]["dataset_id"]) == expected_code]
     if len(exact) != 1:
         raise RuntimeError(f"Expected one root dataset in {version_dir}, found {len(exact)}")
     return exact[0]
 
 
-def catalogue_records(catalogue: Path) -> tuple[list[dict], dict]:
+def catalogue_index(catalogue: Path) -> tuple[list[dict], dict]:
     super_files = list((catalogue / "metadata" / "super").rglob("*.json"))
     if len(super_files) != 1:
         raise RuntimeError("Could not identify the catalogue super dataset")
     super_record = load_json(super_files[0])
+    return super_record["subdatasets"], super_record
+
+
+def catalogue_records(catalogue: Path) -> tuple[list[dict], dict]:
+    items, super_record = catalogue_index(catalogue)
     records = []
-    for item in super_record["subdatasets"]:
+    for item in items:
         code = dataset_code(item["dataset_id"])
         dataset_dir = catalogue / "metadata" / item["dataset_path"]
         versions = sorted(dataset_dir.glob("V*"), key=lambda p: int(p.name[1:]))
-        version_records = [root_dataset(path, code) for path in versions]
+        version_sources = [root_dataset(path, code) for path in versions]
+        version_records = [value for value, _ in version_sources]
         records.append({
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.1",
             "datasetId": code,
             "name": version_records[-1].get("name", item["dataset_id"]),
-            "versions": [derive_record(value) for value in version_records],
-            "_sources": version_records,
+            "versions": [
+                derive_record(value, source_reference(path, catalogue))
+                for value, path in version_sources
+            ],
+        })
+    records.sort(key=lambda value: value["datasetId"])
+    return records, super_record
+
+
+def existing_records(output: Path) -> dict[str, dict]:
+    return {
+        record["datasetId"]: record
+        for path in sorted(output.glob("PN*.json"))
+        for record in [load_json(path)]
+    }
+
+
+def incremental_catalogue_records(catalogue: Path, output: Path) -> tuple[list[dict], dict]:
+    """Refresh records whose stored catalogue source changed; discover new versions."""
+    items, super_record = catalogue_index(catalogue)
+    existing = existing_records(output)
+    records = []
+    for item in items:
+        code = dataset_code(item["dataset_id"])
+        dataset_dir = catalogue / "metadata" / item["dataset_path"]
+        version_dirs = sorted(dataset_dir.glob("V*"), key=lambda p: int(p.name[1:]))
+        old_dataset = existing.get(code, {})
+        old_versions = {value["version"]: value for value in old_dataset.get("versions", [])}
+        versions = []
+        source_names = []
+        for version_dir in version_dirs:
+            old = old_versions.get(version_dir.name)
+            stored_source = old.get("source") if old else None
+            source_path = catalogue / stored_source["path"] if stored_source else None
+            if source_path and source_path.is_file():
+                current_ref = source_reference(source_path, catalogue)
+                if current_ref["sha256"] == stored_source.get("sha256"):
+                    versions.append(old)
+                    source_names.append(None)
+                    continue
+                source = load_json(source_path)
+            else:
+                source, source_path = root_dataset(version_dir, code)
+                current_ref = source_reference(source_path, catalogue)
+            versions.append(derive_record(source, current_ref))
+            source_names.append(source.get("name"))
+        latest_name = source_names[-1] if source_names and source_names[-1] else old_dataset.get("name")
+        records.append({
+            "schemaVersion": "1.1",
+            "datasetId": code,
+            "name": latest_name or item["dataset_id"],
+            "versions": versions,
         })
     records.sort(key=lambda value: value["datasetId"])
     return records, super_record
@@ -317,12 +382,12 @@ def write_cerif(records: list[dict], output: Path, response_date: str) -> None:
     request = add(root, OAI, "request", "https://datacatalog.publicneuro.eu/openaire", metadataPrefix="cerif_openaire", verb="ListRecords", set="openaire_cris_datasets")
     listing = add(root, OAI, "ListRecords")
     for dataset in records:
-        for version, source in zip(dataset["versions"], dataset["_sources"]):
+        for version in dataset["versions"]:
             key = f"{dataset['datasetId']}-{version['version']}"
             record = add(listing, OAI, "record")
             header = add(record, OAI, "header")
             add(header, OAI, "identifier", f"oai:datacatalog.publicneuro.eu:Products/{key}")
-            add(header, OAI, "datestamp", iso_timestamp(source.get("dateModified")))
+            add(header, OAI, "datestamp", iso_timestamp(version.get("lastUpdated")))
             add(header, OAI, "setSpec", "openaire_cris_datasets")
             metadata = add(record, OAI, "metadata")
             product = ET.SubElement(metadata, f"{{{CERIF}}}Product", {"id": f"Products/{key}"})
@@ -439,10 +504,21 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--catalogue", type=Path, required=True)
     parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument(
+        "--incremental",
+        action="store_true",
+        help="reuse unchanged records by following their stored catalogue source paths",
+    )
     args = parser.parse_args()
 
-    records, super_record = catalogue_records(args.catalogue.resolve())
     output = args.output.resolve()
+    catalogue = args.catalogue.resolve()
+    if args.incremental:
+        records, super_record = incremental_catalogue_records(
+            catalogue, output / "datasets"
+        )
+    else:
+        records, super_record = catalogue_records(catalogue)
     write_json_records(records, output / "datasets")
     updated = super_record.get("dateModified") or max(
         (v.get("lastUpdated", "") for d in records for v in d["versions"]), default=""
