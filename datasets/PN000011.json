@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.2",
+  "schemaVersion": "1.3",
   "datasetId": "PN000011",
   "name": "A dataset of clinical pediatric brain MRI with and without motion correction",
   "versions": [
@@ -7,7 +7,6 @@
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000011%20A%20dataset%20of%20clinical%20pediatric%20brain%20MRI%20with%20and%20without%20motion%20correction/V1",
       "status": "active",
-      "statusSource": "inferred-default",
       "retrieval": {
         "mode": "online",
         "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000011"

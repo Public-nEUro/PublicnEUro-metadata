@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.2",
+  "schemaVersion": "1.3",
   "datasetId": "PN000024",
   "name": "A clinical brain MRI dataset of polymicrogyria in patients suspected of epilepsy",
   "versions": [
@@ -7,7 +7,6 @@
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000024%20A%20clinical%20brain%20MRI%20dataset%20of%20polymicrogyria%20in%20patients%20suspected%20of%20epilepsy/V1",
       "status": "active",
-      "statusSource": "inferred-default",
       "retrieval": {
         "mode": "online",
         "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000024"

@@ -2,6 +2,7 @@ import hashlib
 import json
 import tempfile
 import unittest
+from decimal import Decimal
 from pathlib import Path
 
 from scripts.generate import (
@@ -9,7 +10,9 @@ from scripts.generate import (
     duc_for,
     incremental_catalogue_records,
     normalized_doi_url,
+    repository_statistics,
     retrieval_for,
+    source_statistics,
 )
 
 
@@ -35,7 +38,7 @@ class GenerateTests(unittest.TestCase):
             "name": "Example",
         })
         self.assertEqual(record["status"], "active")
-        self.assertEqual(record["statusSource"], "inferred-default")
+        self.assertNotIn("statusSource", record)
         self.assertEqual(record["retrieval"]["mode"], "online")
 
     def test_explicit_status_is_preserved(self):
@@ -47,8 +50,65 @@ class GenerateTests(unittest.TestCase):
             "download_url": "https://example.org/download",
             "access_request_contact": "person@example.org",
         })
-        self.assertEqual(record["statusSource"], "catalogue")
+        self.assertNotIn("statusSource", record)
         self.assertEqual(record["retrieval"], {"mode": "unavailable"})
+
+    def test_repository_source_statistics(self):
+        values = source_statistics({
+            "license": {"name": "Data User Agreement"},
+            "description": "Example dataset (total size: 12.50 GB)",
+            "additional_display": [{
+                "name": "Participants",
+                "content": {
+                    "total_number": ["30"],
+                    "number_of_healthy": ["18"],
+                },
+            }],
+        })
+        self.assertEqual(values["access"], "restricted")
+        self.assertEqual(values["total"], 30)
+        self.assertEqual(values["healthy"], 18)
+        self.assertEqual(values["sizeGB"], Decimal("12.50"))
+
+    def test_actual_licence_is_open_and_missing_values_are_not_invented(self):
+        values = source_statistics({"license": {"name": "CC BY 4.0"}})
+        self.assertEqual(values["access"], "open")
+        self.assertIsNone(values["total"])
+        self.assertIsNone(values["healthy"])
+        self.assertIsNone(values["sizeGB"])
+
+    def test_repository_statistics_use_latest_version_only(self):
+        with tempfile.TemporaryDirectory() as directory:
+            catalogue = Path(directory)
+            sources = []
+            for version, total in (("V1", 10), ("V2", 20)):
+                path = Path("metadata") / "PN000001 Example" / version / "abc" / f"{version}.json"
+                target = catalogue / path
+                target.parent.mkdir(parents=True)
+                target.write_text(json.dumps({
+                    "license": {"name": "Data User Agreement"},
+                    "description": f"Example (total size: {total} GB)",
+                    "additional_display": [{
+                        "name": "Participants",
+                        "content": {
+                            "total_number": [str(total)],
+                            "number_of_healthy": [str(total - 2)],
+                        },
+                    }],
+                }), encoding="utf-8")
+                sources.append({"version": version, "source": {"path": path.as_posix()}})
+
+            stats = repository_statistics([{
+                "datasetId": "PN000001",
+                "versions": sources,
+            }], catalogue)
+            self.assertEqual(stats["datasets"], 1)
+            self.assertEqual(stats["versions"], 2)
+            self.assertEqual(stats["restricted"], 1)
+            self.assertEqual(stats["participants"], 20)
+            self.assertEqual(stats["healthy"], 18)
+            self.assertEqual(stats["patients"], 2)
+            self.assertEqual(stats["sizeGB"], Decimal("20"))
 
     def test_retrieval_contact(self):
         result = retrieval_for("retired", {
@@ -182,7 +242,7 @@ class GenerateTests(unittest.TestCase):
             }), encoding="utf-8")
             output.mkdir()
             existing = {
-                "schemaVersion": "1.2",
+                "schemaVersion": "1.3",
                 "datasetId": "PN000001",
                 "name": "Example",
                 "versions": [{
@@ -191,13 +251,13 @@ class GenerateTests(unittest.TestCase):
                         "path": source_path.relative_to(catalogue).as_posix(),
                         "sha256": hashlib.sha256(source_text.encode()).hexdigest(),
                     },
-                    "statusSource": "preserved-marker",
+                    "keywords": ["preserved-marker"],
                 }],
             }
             (output / "PN000001.json").write_text(json.dumps(existing), encoding="utf-8")
 
             records, _ = incremental_catalogue_records(catalogue, output)
-            self.assertEqual(records[0]["versions"][0]["statusSource"], "preserved-marker")
+            self.assertEqual(records[0]["versions"][0]["keywords"], ["preserved-marker"])
 
             source["status"] = "withdrawn"
             source["status_note"] = "Controller request"

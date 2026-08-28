@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.2",
+  "schemaVersion": "1.3",
   "datasetId": "PN000020",
   "name": "Serotonine transporter imaging in MDMA or hallucinogenic drug users and non using controls",
   "versions": [
@@ -7,7 +7,6 @@
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000020%20Serotonine%20transporter%20imaging%20in%20MDMA%20or%20hallucinogenic%20drug%20users%20and%20non%20using%20controls/V1",
       "status": "active",
-      "statusSource": "inferred-default",
       "retrieval": {
         "mode": "online",
         "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000020"

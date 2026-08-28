@@ -6,7 +6,7 @@
   "additionalProperties": false,
   "required": ["schemaVersion", "datasetId", "name", "versions"],
   "properties": {
-    "schemaVersion": {"const": "1.2"},
+    "schemaVersion": {"const": "1.3"},
     "datasetId": {"pattern": "^PN[0-9]{6}$"},
     "name": {"type": "string", "minLength": 1},
     "versions": {
@@ -19,7 +19,7 @@
     "version": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["version", "source", "status", "statusSource", "retrieval", "duc", "ducProvenance", "catalogueUrl"],
+      "required": ["version", "source", "status", "retrieval", "duc", "ducProvenance", "catalogueUrl"],
       "properties": {
         "version": {"pattern": "^V[0-9]+$"},
         "source": {"$ref": "#/$defs/source"},
@@ -27,7 +27,6 @@
         "catalogueUrl": {"type": "string", "format": "uri"},
         "lastUpdated": {"type": "string", "format": "date"},
         "status": {"enum": ["active", "archived", "retired", "withdrawn", "superseded"]},
-        "statusSource": {"enum": ["catalogue", "inferred-default"]},
         "statusNote": {"type": "string", "minLength": 1},
         "replacement": {"type": "string", "format": "uri"},
         "retrieval": {
