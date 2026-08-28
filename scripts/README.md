@@ -1,43 +1,78 @@
 # Metadata scripts
 
 The scripts support two distinct workflows: deriving dataset records from the
-DataCatalogue and rebuilding aggregate outputs after manual review.
+DataCatalogue and preserving human review while rebuilding aggregate outputs.
+
+## Data ownership
+
+Three layers are deliberately kept separate:
+
+| Layer | Location | Role |
+|---|---|---|
+| Catalogue source | `DataCatalogue/metadata/.../*.json` | DOI, lifecycle status, retrieval, creators and other source metadata. |
+| Human curation | `curation/PN*.json` | Minimal merge patches for reviewed `duc` and `ducProvenance` fields. |
+| Complete records | `datasets/PN*.json` | Reproducible combination of catalogue generation and human curation. |
+
+`curation/manifest.json` records the SHA-256 of each complete dataset file at
+its last generation or successful capture. This lets generation stop before it
+could overwrite an edit that has not yet been captured.
 
 ## Generate or synchronize dataset records
 
-A full generation derives every `datasets/PN*.json` record again from the
-DataCatalogue:
+A full generation derives every record again from DataCatalogue, reapplies all
+saved `curation/PN*.json` patches, and then writes `datasets/PN*.json`:
 
 ```bash
 python scripts/generate.py --catalogue ../DataCatalogue
 ```
 
-Incremental generation follows each stored `source.path`, preserves unchanged
-reviewed records, and regenerates records whose catalogue source has changed:
+Incremental generation follows each stored `source.path`, reuses unchanged
+records, discovers new datasets and versions, regenerates changed catalogue
+sources, and reapplies saved curation:
 
 ```bash
 python scripts/generate.py --catalogue ../DataCatalogue --incremental
 ```
 
-Use full generation after changing generator or DUA-to-DUC mapping logic. Be
-aware that it replaces manual corrections in generated dataset records.
+Use full generation after changing the generated representation or DUA-to-DUC
+mapping logic. Saved manual curation is preserved and applied to the new
+representation. If a representation change makes a patch incompatible with the
+schema, validation fails so the reviewed patch can be migrated explicitly.
 
 ## Review and rebuild aggregate outputs
 
-After reviewing or correcting `datasets/PN*.json`, rebuild the README table,
-repository summary, OpenAIRE CERIF export, and re3data export without deriving
-the dataset records again:
+After reviewing `duc` or `ducProvenance` in `datasets/PN*.json`, rebuild the
+README table, repository summary, OpenAIRE CERIF export, and re3data export:
 
 ```bash
 python scripts/rebuild.py --catalogue ../DataCatalogue
 ```
 
-`rebuild.py` treats the reviewed files as authoritative and never writes to the
-`datasets/` directory. It validates every record before changing aggregate
-outputs. The catalogue is read only to recompute access, participant, and size
-statistics, which are deliberately not duplicated in the governance records.
-Versions marked `human-reviewed` are labelled as reviewed rather than inferred
-in the generated README table.
+Before rebuilding aggregate outputs, `rebuild.py` compares the reviewed records
+with a clean catalogue derivation and automatically saves minimal differences
+under `curation/`. It never writes to `datasets/`. Only `duc` and
+`ducProvenance` are curatable here; corrections to status, retrieval, DOI,
+source, version, creators or keywords must be made in DataCatalogue.
+
+The catalogue source hashes must still match. This prevents a catalogue update
+from being mistaken for human curation. Versions marked `human-reviewed` are
+labelled as reviewed rather than inferred in the generated README table.
+
+The capture step can also be run without rebuilding aggregate exports:
+
+```bash
+python scripts/capture_overrides.py --catalogue ../DataCatalogue
+```
+
+Generation refuses to overwrite files changed since the last generation or
+capture. Normally, run `rebuild.py` to preserve them. To intentionally discard
+such edits instead:
+
+```bash
+python scripts/generate.py \
+  --catalogue ../DataCatalogue \
+  --discard-manual-changes
+```
 
 For a repository checkout in another location:
 
@@ -66,10 +101,62 @@ python -m pip install -r requirements-dev.txt
 python -m unittest discover -s tests
 ```
 
+## Complete data-flow examples
+
+### First generation and review
+
+```bash
+# 1. Derive all complete records from scratch.
+python scripts/generate.py --catalogue ../DataCatalogue
+
+# 2. Review a generated DUC and mark its provenance human-reviewed.
+$EDITOR datasets/PN000005.json
+
+# 3. Capture the review and rebuild README/XML.
+python scripts/rebuild.py --catalogue ../DataCatalogue
+
+# 4. Verify everything.
+python scripts/validate.py
+python -m unittest discover -s tests
+```
+
+Step 3 writes only the differences from the catalogue-derived DUC to
+`curation/PN000005.json` and records the reviewed dataset hash in the manifest.
+
+### Add new or changed catalogue datasets
+
+```bash
+# Existing reviewed DUCs remain applied; new datasets are discovered.
+python scripts/generate.py --catalogue ../DataCatalogue --incremental
+
+# Review a new or refreshed record.
+$EDITOR datasets/PN000025.json
+
+# Capture that review and refresh aggregate outputs.
+python scripts/rebuild.py --catalogue ../DataCatalogue
+```
+
+### Change the generated representation
+
+After modifying `generate.py`, its mapping rules, or the dataset schema:
+
+```bash
+# Re-derive every dataset using the new representation. Existing curation
+# patches are reapplied before the complete records are written.
+python scripts/generate.py --catalogue ../DataCatalogue
+
+python scripts/validate.py
+python -m unittest discover -s tests
+```
+
+Untouched generated fields adopt the new representation. Manually reviewed
+DUC fields remain. If the new schema conflicts with an old reviewed value,
+validation exposes that record rather than silently deleting its curation.
+
 ## Recommended review sequence
 
 1. Run incremental generation to incorporate catalogue changes.
 2. Review and edit the relevant `datasets/PN*.json` files.
 3. Set `ducProvenance.mappingStatus` to `human-reviewed` where appropriate.
-4. Run `scripts/rebuild.py` to update README and XML aggregates.
+4. Run `scripts/rebuild.py` to capture curation and update README/XML.
 5. Run tests and validation, then commit the reviewed records and rebuilt files.

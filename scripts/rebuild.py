@@ -7,8 +7,10 @@ import argparse
 from pathlib import Path
 
 if __package__:
+    from .curation import capture_curation, write_manifest
     from .generate import (
         catalogue_index,
+        catalogue_records,
         load_json,
         repository_statistics,
         update_readme,
@@ -16,8 +18,10 @@ if __package__:
         write_re3data,
     )
 else:  # Direct execution: python scripts/rebuild.py
+    from curation import capture_curation, write_manifest
     from generate import (
         catalogue_index,
+        catalogue_records,
         load_json,
         repository_statistics,
         update_readme,
@@ -63,6 +67,8 @@ def rebuild(output: Path, catalogue: Path) -> int:
             f"Validated {count} records but loaded {len(records)} reviewed records"
         )
 
+    baseline, _ = catalogue_records(catalogue)
+    capture_curation(baseline, records, output / "curation")
     stats = repository_statistics(records, catalogue)
     _, super_record = catalogue_index(catalogue)
     updated = super_record.get("dateModified") or max(
@@ -77,6 +83,7 @@ def rebuild(output: Path, catalogue: Path) -> int:
     repository = load_json(output / "repository.json")
     write_re3data(repository, len(records), updated, output / "exports" / "re3data.xml")
     update_readme(output / "README.md", records, stats)
+    write_manifest(output / "datasets", output / "curation" / "manifest.json")
     return count
 
 
@@ -88,7 +95,7 @@ def main() -> None:
         "--catalogue",
         type=Path,
         required=True,
-        help="DataCatalogue checkout used only for repository summary statistics",
+        help="DataCatalogue checkout used for curation comparison and summary statistics",
     )
     parser.add_argument("--output", type=Path, default=ROOT)
     args = parser.parse_args()
