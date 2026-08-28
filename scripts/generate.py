@@ -564,10 +564,15 @@ def update_readme(readme: Path, records: list[dict], stats: dict) -> None:
             doi_cell = f"[{doi_value(doi)}]({doi})" if doi else "—"
             condition_count = len(version["duc"]["conditions"])
             condition_label = "condition" if condition_count == 1 else "conditions"
+            review_label = (
+                "reviewed"
+                if version["ducProvenance"]["mappingStatus"] == "human-reviewed"
+                else "inferred"
+            )
             rows.append(
                 f"| [{dataset['datasetId']}]({version['catalogueUrl']}) {dataset['name']} "
                 f"| {version['version']} | {version['status']} | {version['retrieval']['mode']} "
-                f"| {condition_count} inferred {condition_label} | {doi_cell} | {version.get('lastUpdated', '—')} |"
+                f"| {condition_count} {review_label} {condition_label} | {doi_cell} | {version.get('lastUpdated', '—')} |"
             )
     access = f"{stats['open']} open access / {stats['restricted']} restricted"
     if stats["unclassified"]:
