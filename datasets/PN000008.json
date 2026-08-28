@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.2",
+  "schemaVersion": "1.3",
   "datasetId": "PN000008",
   "name": "Leuven PET UCB-J dataset 4 in control participants",
   "versions": [
@@ -7,7 +7,6 @@
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000008%20Leuven%20PET%20UCB-J%20dataset%204%20in%20control%20participants/V1",
       "status": "active",
-      "statusSource": "inferred-default",
       "retrieval": {
         "mode": "online",
         "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000008"

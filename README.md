@@ -11,11 +11,16 @@ The generated records keep three independent facts for every dataset version:
   exposed by the catalogue.
 
 For backwards compatibility, a catalogue record without `status` is exported
-as `active` and marked with `statusSource: "inferred-default"`. Explicit values
-are marked `statusSource: "catalogue"`.
+as `active`.
 
 <!-- DATASET_TABLE_START -->
 **24 datasets / 25 versions**
+
+- **Access:** 3 open access / 21 restricted
+- **Participants:** 2,130 total (1,731 healthy / 399 patients)
+- **Documented size:** 5,058.19 GB (≈5.06 TB; reported for 23/24 datasets)
+
+Figures use the latest version of each dataset. Access is restricted when the catalogue licence is `Data User Agreement`; participant counts come from the `Participants` panel; patients are inferred as total minus healthy participants. Counts are dataset-level and may include the same individuals in related datasets.
 
 | Dataset | Version | Status | Retrieval | DUC | DOI | Updated |
 |---|---:|---|---|---|---|---|
@@ -70,7 +75,6 @@ diverge later.
 | Field | Meaning |
 |---|---|
 | `status` | Repository lifecycle state for that dataset version. |
-| `statusSource` | Whether status was explicit in DataCatalogue or inferred as the backwards-compatible `active` default. |
 | `retrieval.mode` | Where and how the data can currently be retrieved. |
 | `retrieval.url` | Normal access or external-request route, when applicable. |
 | `retrieval.contact` | Data-controller contact for externally held data, when applicable. |

@@ -8,12 +8,13 @@ import hashlib
 import json
 import re
 import xml.etree.ElementTree as ET
+from decimal import Decimal
 from pathlib import Path
 from urllib.parse import quote
 
 
 STATUSES = {"active", "archived", "retired", "withdrawn", "superseded"}
-SCHEMA_VERSION = "1.2"
+SCHEMA_VERSION = "1.3"
 RETRIEVAL_MODES = {
     "active": "online",
     "archived": "cold_archive",
@@ -212,7 +213,6 @@ def source_reference(path: Path, catalogue: Path) -> dict:
 
 
 def derive_record(source: dict, source_ref: dict | None = None) -> dict:
-    status_source = "catalogue" if source.get("status") else "inferred-default"
     status = source.get("status", "active")
     if status not in STATUSES:
         raise ValueError(f"Unknown status {status!r} in {source.get('dataset_id')}")
@@ -225,7 +225,6 @@ def derive_record(source: dict, source_ref: dict | None = None) -> dict:
         "version": version,
         "catalogueUrl": catalogue_url,
         "status": status,
-        "statusSource": status_source,
         "retrieval": retrieval_for(status, source),
         "duc": duc,
         "ducProvenance": duc_provenance,
@@ -307,6 +306,85 @@ def existing_records(output: Path) -> dict[str, dict]:
         for path in sorted(output.glob("PN*.json"))
         for record in [load_json(path)]
     }
+
+
+def first_value(value):
+    if isinstance(value, list):
+        return value[0] if value else None
+    return value
+
+
+def integer_value(value) -> int | None:
+    value = first_value(value)
+    if value is None or isinstance(value, bool):
+        return None
+    text = str(value).strip()
+    return int(text) if re.fullmatch(r"\d+", text) else None
+
+
+def source_statistics(source: dict) -> dict:
+    """Extract access, participant, and documented-size facts from one version."""
+    license_name = str((source.get("license") or {}).get("name") or "").strip()
+    if license_name.casefold() == "data user agreement":
+        access = "restricted"
+    elif license_name:
+        access = "open"
+    else:
+        access = "unclassified"
+
+    total = healthy = None
+    for panel in source.get("additional_display") or []:
+        if str(panel.get("name", "")).strip().casefold() != "participants":
+            continue
+        content = panel.get("content") or {}
+        total = integer_value(content.get("total_number"))
+        healthy = integer_value(content.get("number_of_healthy"))
+        break
+
+    description = source.get("description")
+    description = "\n".join(description) if isinstance(description, list) else str(description or "")
+    match = re.search(
+        r"\(\s*total size:\s*([0-9]+(?:[.,][0-9]+)?)\s*GB\s*\)",
+        description,
+        flags=re.I,
+    )
+    size_gb = Decimal(match.group(1).replace(",", ".")) if match else None
+    return {"access": access, "total": total, "healthy": healthy, "sizeGB": size_gb}
+
+
+def repository_statistics(records: list[dict], catalogue: Path) -> dict:
+    """Aggregate latest-version figures without double-counting versioned datasets."""
+    stats = {
+        "datasets": len(records),
+        "versions": sum(len(dataset["versions"]) for dataset in records),
+        "open": 0,
+        "restricted": 0,
+        "unclassified": 0,
+        "participants": 0,
+        "healthy": 0,
+        "patients": 0,
+        "participantDatasets": 0,
+        "sizeGB": Decimal("0"),
+        "sizeDatasets": 0,
+    }
+    for dataset in records:
+        latest = dataset["versions"][-1]
+        source = load_json(catalogue / latest["source"]["path"])
+        values = source_statistics(source)
+        stats[values["access"]] += 1
+        if values["total"] is not None and values["healthy"] is not None:
+            if values["healthy"] > values["total"]:
+                raise ValueError(
+                    f"Healthy participant count exceeds total in {dataset['datasetId']}"
+                )
+            stats["participants"] += values["total"]
+            stats["healthy"] += values["healthy"]
+            stats["patients"] += values["total"] - values["healthy"]
+            stats["participantDatasets"] += 1
+        if values["sizeGB"] is not None:
+            stats["sizeGB"] += values["sizeGB"]
+            stats["sizeDatasets"] += 1
+    return stats
 
 
 def incremental_catalogue_records(catalogue: Path, output: Path) -> tuple[list[dict], dict]:
@@ -475,7 +553,7 @@ def write_re3data(repository: dict, dataset_count: int, last_update: str, output
     ET.ElementTree(root).write(output, encoding="utf-8", xml_declaration=True)
 
 
-def update_readme(readme: Path, records: list[dict]) -> None:
+def update_readme(readme: Path, records: list[dict], stats: dict) -> None:
     rows = [
         "| Dataset | Version | Status | Retrieval | DUC | DOI | Updated |",
         "|---|---:|---|---|---|---|---|",
@@ -491,8 +569,22 @@ def update_readme(readme: Path, records: list[dict]) -> None:
                 f"| {version['version']} | {version['status']} | {version['retrieval']['mode']} "
                 f"| {condition_count} inferred {condition_label} | {doi_cell} | {version.get('lastUpdated', '—')} |"
             )
+    access = f"{stats['open']} open access / {stats['restricted']} restricted"
+    if stats["unclassified"]:
+        access += f" / {stats['unclassified']} unclassified"
+    size_gb = stats["sizeGB"]
     summary = (
-        f"\n**{len(records)} datasets / {sum(len(d['versions']) for d in records)} versions**\n\n"
+        f"\n**{stats['datasets']} datasets / {stats['versions']} versions**\n\n"
+        f"- **Access:** {access}\n"
+        f"- **Participants:** {stats['participants']:,} total "
+        f"({stats['healthy']:,} healthy / {stats['patients']:,} patients)\n"
+        f"- **Documented size:** {size_gb:,.2f} GB "
+        f"(≈{size_gb / Decimal('1000'):,.2f} TB; "
+        f"reported for {stats['sizeDatasets']}/{stats['datasets']} datasets)\n\n"
+        "Figures use the latest version of each dataset. Access is restricted when the "
+        "catalogue licence is `Data User Agreement`; participant counts come from the "
+        "`Participants` panel; patients are inferred as total minus healthy participants. "
+        "Counts are dataset-level and may include the same individuals in related datasets.\n\n"
         + "\n".join(rows)
         + "\n"
     )
@@ -521,6 +613,7 @@ def main() -> None:
         )
     else:
         records, super_record = catalogue_records(catalogue)
+    stats = repository_statistics(records, catalogue)
     write_json_records(records, output / "datasets")
     updated = super_record.get("dateModified") or max(
         (v.get("lastUpdated", "") for d in records for v in d["versions"]), default=""
@@ -528,7 +621,7 @@ def main() -> None:
     write_cerif(records, output / "exports" / "openaire-cerif.xml", updated)
     repository = load_json(output / "repository.json")
     write_re3data(repository, len(records), updated, output / "exports" / "re3data.xml")
-    update_readme(output / "README.md", records)
+    update_readme(output / "README.md", records, stats)
 
 
 if __name__ == "__main__":
