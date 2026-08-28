@@ -20,11 +20,12 @@ def load(path: Path) -> dict:
         return json.load(stream)
 
 
-def main() -> None:
-    schema = load(ROOT / "schema" / "dataset.schema.json")
+def validation_failures(root: Path = ROOT) -> tuple[list[Path], list[str]]:
+    """Return dataset files and validation failures without exiting the process."""
+    schema = load(root / "schema" / "dataset.schema.json")
     validator = Draft202012Validator(schema, format_checker=FormatChecker())
     failures = []
-    files = sorted((ROOT / "datasets").glob("PN*.json"))
+    files = sorted((root / "datasets").glob("PN*.json"))
     for path in files:
         record = load(path)
         for error in validator.iter_errors(record):
@@ -40,9 +41,23 @@ def main() -> None:
                     failures.append(
                         f"{path.name}: condition {index} has non-standard fields: {sorted(extra)}"
                     )
+    return files, failures
+
+
+def validate_records(root: Path = ROOT) -> int:
+    """Validate all dataset records and return their number."""
+    files, failures = validation_failures(root)
     if failures:
-        raise SystemExit("\n".join(failures))
-    print(f"Validated {len(files)} dataset records")
+        raise ValueError("\n".join(failures))
+    return len(files)
+
+
+def main() -> None:
+    try:
+        count = validate_records(ROOT)
+    except ValueError as error:
+        raise SystemExit(str(error)) from error
+    print(f"Validated {count} dataset records")
 
 
 if __name__ == "__main__":
