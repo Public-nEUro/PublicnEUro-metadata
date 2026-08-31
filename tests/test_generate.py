@@ -113,33 +113,32 @@ class GenerateTests(unittest.TestCase):
 
     def test_repository_summary_is_small_numeric_and_website_facing(self):
         summary = repository_summary({
-            "datasets": 24,
-            "versions": 25,
-            "open": 3,
-            "restricted": 21,
-            "unclassified": 0,
-            "participants": 2130,
-            "healthy": 1731,
-            "patients": 399,
-            "participantDatasets": 24,
-            "sizeGB": Decimal("5058.19"),
-            "sizeDatasets": 23,
+            "datasets": 2,
+            "versions": 3,
+            "open": 1,
+            "restricted": 0,
+            "unclassified": 1,
+            "participants": 42,
+            "healthy": 30,
+            "patients": 12,
+            "participantDatasets": 1,
+            "sizeGB": Decimal("1234.567"),
+            "sizeDatasets": 1,
         })
         self.assertEqual(summary, {
             "schemaVersion": "1.0",
-            "datasets": 24,
-            "versions": 25,
-            "access": {"open": 3, "restricted": 21, "unclassified": 0},
+            "datasets": 2,
+            "versions": 3,
+            "access": {"open": 1, "restricted": 0, "unclassified": 1},
             "participants": {
-                "total": 2130,
-                "healthy": 1731,
-                "patients": 399,
-                "datasetsWithCounts": 24,
+                "total": 42,
+                "healthy": 30,
+                "patients": 12,
+                "datasetsWithCounts": 1,
             },
             "documentedSize": {
-                "gigabytes": 5058.19,
-                "terabytes": 5.06,
-                "datasetsWithSize": 23,
+                "terabytes": 1.23,
+                "datasetsWithSize": 1,
             },
         })
 

@@ -61,9 +61,9 @@ labelled as reviewed rather than inferred in the generated README table.
 
 The JSON summary is a stable website-facing contract. It contains numeric
 dataset and version totals, access counts, participant counts, count coverage,
-and documented size in GB and TB. It is generated from the same statistics as
-the README summary and is refreshed by both full/incremental generation and
-`rebuild.py`.
+and documented size in TB to two decimal places. It is generated from the same
+statistics as the README summary and is refreshed by both full/incremental
+generation and `rebuild.py`.
 
 | JSON field | Meaning |
 |---|---|
@@ -71,7 +71,7 @@ the README summary and is refreshed by both full/incremental generation and
 | `datasets`, `versions` | Repository dataset and published-version totals. |
 | `access` | Latest-version counts classified as `open`, `restricted`, or `unclassified`. |
 | `participants` | Total, healthy, and inferred patient counts plus the number of datasets reporting both required counts. |
-| `documentedSize` | Sum in decimal GB/TB plus the number of datasets reporting a size. |
+| `documentedSize` | Sum in decimal TB, rounded to two places, plus the number of datasets reporting a size. |
 
 Website clients can fetch the current main-branch export from
 `https://raw.githubusercontent.com/Public-nEUro/PublicnEUro-metadata/main/exports/repository-summary.json`.

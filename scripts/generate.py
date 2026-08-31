@@ -394,7 +394,7 @@ def repository_statistics(records: list[dict], catalogue: Path) -> dict:
 
 def repository_summary(stats: dict) -> dict:
     """Return the stable public JSON representation of repository statistics."""
-    size_gb = stats["sizeGB"]
+    size_tb = (stats["sizeGB"] / Decimal("1000")).quantize(Decimal("0.01"))
     return {
         "schemaVersion": "1.0",
         "datasets": stats["datasets"],
@@ -411,10 +411,7 @@ def repository_summary(stats: dict) -> dict:
             "datasetsWithCounts": stats["participantDatasets"],
         },
         "documentedSize": {
-            "gigabytes": float(size_gb),
-            "terabytes": float(
-                (size_gb / Decimal("1000")).quantize(Decimal("0.01"))
-            ),
+            "terabytes": float(size_tb),
             "datasetsWithSize": stats["sizeDatasets"],
         },
     }
@@ -619,15 +616,14 @@ def update_readme(readme: Path, records: list[dict], stats: dict) -> None:
     access = f"{stats['open']} open access / {stats['restricted']} restricted"
     if stats["unclassified"]:
         access += f" / {stats['unclassified']} unclassified"
-    size_gb = stats["sizeGB"]
+    size_tb = (stats["sizeGB"] / Decimal("1000")).quantize(Decimal("0.01"))
     summary = (
         f"\n**{stats['datasets']} datasets / {stats['versions']} versions**\n\n"
         f"- **Access:** {access}\n"
         f"- **Participants:** {stats['participants']:,} total "
         f"({stats['healthy']:,} healthy / {stats['patients']:,} patients)\n"
-        f"- **Documented size:** {size_gb:,.2f} GB "
-        f"(≈{size_gb / Decimal('1000'):,.2f} TB; "
-        f"reported for {stats['sizeDatasets']}/{stats['datasets']} datasets)\n\n"
+        f"- **Documented size:** {size_tb:,.2f} TB "
+        f"(reported for {stats['sizeDatasets']}/{stats['datasets']} datasets)\n\n"
         "Figures use the latest version of each dataset. Access is restricted when the "
         "catalogue licence is `Data User Agreement`; participant counts come from the "
         "`Participants` panel; patients are inferred as total minus healthy participants. "
