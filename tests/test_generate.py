@@ -10,6 +10,7 @@ from scripts.generate import (
     duc_for,
     incremental_catalogue_records,
     normalized_doi_url,
+    repository_summary,
     repository_statistics,
     retrieval_for,
     source_statistics,
@@ -109,6 +110,38 @@ class GenerateTests(unittest.TestCase):
             self.assertEqual(stats["healthy"], 18)
             self.assertEqual(stats["patients"], 2)
             self.assertEqual(stats["sizeGB"], Decimal("20"))
+
+    def test_repository_summary_is_small_numeric_and_website_facing(self):
+        summary = repository_summary({
+            "datasets": 24,
+            "versions": 25,
+            "open": 3,
+            "restricted": 21,
+            "unclassified": 0,
+            "participants": 2130,
+            "healthy": 1731,
+            "patients": 399,
+            "participantDatasets": 24,
+            "sizeGB": Decimal("5058.19"),
+            "sizeDatasets": 23,
+        })
+        self.assertEqual(summary, {
+            "schemaVersion": "1.0",
+            "datasets": 24,
+            "versions": 25,
+            "access": {"open": 3, "restricted": 21, "unclassified": 0},
+            "participants": {
+                "total": 2130,
+                "healthy": 1731,
+                "patients": 399,
+                "datasetsWithCounts": 24,
+            },
+            "documentedSize": {
+                "gigabytes": 5058.19,
+                "terabytes": 5.06,
+                "datasetsWithSize": 23,
+            },
+        })
 
     def test_retrieval_contact(self):
         result = retrieval_for("retired", {

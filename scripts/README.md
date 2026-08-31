@@ -42,7 +42,8 @@ schema, validation fails so the reviewed patch can be migrated explicitly.
 ## Review and rebuild aggregate outputs
 
 After reviewing `duc` or `ducProvenance` in `datasets/PN*.json`, rebuild the
-README table, repository summary, OpenAIRE CERIF export, and re3data export:
+README table, `exports/repository-summary.json`, OpenAIRE CERIF export, and
+re3data export:
 
 ```bash
 python scripts/rebuild.py --catalogue ../DataCatalogue
@@ -57,6 +58,23 @@ source, version, creators or keywords must be made in DataCatalogue.
 The catalogue source hashes must still match. This prevents a catalogue update
 from being mistaken for human curation. Versions marked `human-reviewed` are
 labelled as reviewed rather than inferred in the generated README table.
+
+The JSON summary is a stable website-facing contract. It contains numeric
+dataset and version totals, access counts, participant counts, count coverage,
+and documented size in GB and TB. It is generated from the same statistics as
+the README summary and is refreshed by both full/incremental generation and
+`rebuild.py`.
+
+| JSON field | Meaning |
+|---|---|
+| `schemaVersion` | Version of this small export contract. |
+| `datasets`, `versions` | Repository dataset and published-version totals. |
+| `access` | Latest-version counts classified as `open`, `restricted`, or `unclassified`. |
+| `participants` | Total, healthy, and inferred patient counts plus the number of datasets reporting both required counts. |
+| `documentedSize` | Sum in decimal GB/TB plus the number of datasets reporting a size. |
+
+Website clients can fetch the current main-branch export from
+`https://raw.githubusercontent.com/Public-nEUro/PublicnEUro-metadata/main/exports/repository-summary.json`.
 
 The capture step can also be run without rebuilding aggregate exports:
 
