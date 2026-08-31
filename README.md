@@ -162,13 +162,18 @@ current DataCatalogue default branch and fails when committed output is stale.
 
 Incremental generation reads each existing version's `source.path`, compares
 its current content with `source.sha256`, and regenerates only changed records.
-New datasets and versions are discovered from the catalogue index. The README
-and XML exports are always rebuilt from the complete local record set. Use a
-full generation only when intentionally re-deriving every record after changing
-generator or DUA-to-DUC mapping logic; it can replace manual review corrections.
+New datasets and versions are discovered from the catalogue index. Saved
+`curation/PN*.json` patches are reapplied before complete records are written,
+so a full generation can safely re-derive the representation without discarding
+reviewed DUC fields. The README and XML exports are always rebuilt from the
+complete local record set.
 
-After manually reviewing or correcting `datasets/PN*.json`, use `rebuild.py`
-to update the README and XML exports without replacing the reviewed records.
+After manually reviewing `duc` or `ducProvenance` in `datasets/PN*.json`, use
+`rebuild.py` to capture the differences under `curation/` and update README/XML
+without replacing the reviewed records. Generation checks
+`curation/manifest.json` and refuses to overwrite uncaptured edits. Catalogue-
+derived fields such as status, retrieval and DOI must instead be corrected in
+DataCatalogue.
 See [`scripts/README.md`](scripts/README.md) for the complete workflow.
 
 To inspect one profile:

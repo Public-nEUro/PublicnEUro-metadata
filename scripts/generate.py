@@ -12,6 +12,11 @@ from decimal import Decimal
 from pathlib import Path
 from urllib.parse import quote
 
+if __package__:
+    from .curation import apply_curation, uncaptured_changes, write_manifest
+else:
+    from curation import apply_curation, uncaptured_changes, write_manifest
+
 
 STATUSES = {"active", "archived", "retired", "withdrawn", "superseded"}
 SCHEMA_VERSION = "1.3"
@@ -608,18 +613,33 @@ def main() -> None:
         action="store_true",
         help="reuse unchanged records by following their stored catalogue source paths",
     )
+    parser.add_argument(
+        "--discard-manual-changes",
+        action="store_true",
+        help="overwrite dataset files changed since their last generation or capture",
+    )
     args = parser.parse_args()
 
     output = args.output.resolve()
     catalogue = args.catalogue.resolve()
+    dataset_dir = output / "datasets"
+    curation_dir = output / "curation"
+    changed = uncaptured_changes(dataset_dir, curation_dir / "manifest.json")
+    if changed and not args.discard_manual_changes:
+        parser.error(
+            "uncaptured manual changes in "
+            + ", ".join(changed)
+            + "; run scripts/rebuild.py first or use --discard-manual-changes"
+        )
     if args.incremental:
         records, super_record = incremental_catalogue_records(
-            catalogue, output / "datasets"
+            catalogue, dataset_dir
         )
     else:
         records, super_record = catalogue_records(catalogue)
+    records = apply_curation(records, curation_dir)
     stats = repository_statistics(records, catalogue)
-    write_json_records(records, output / "datasets")
+    write_json_records(records, dataset_dir)
     updated = super_record.get("dateModified") or max(
         (v.get("lastUpdated", "") for d in records for v in d["versions"]), default=""
     )
@@ -627,6 +647,7 @@ def main() -> None:
     repository = load_json(output / "repository.json")
     write_re3data(repository, len(records), updated, output / "exports" / "re3data.xml")
     update_readme(output / "README.md", records, stats)
+    write_manifest(dataset_dir, curation_dir / "manifest.json")
 
 
 if __name__ == "__main__":
