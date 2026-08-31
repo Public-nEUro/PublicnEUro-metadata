@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate PublicnEUro governance JSON and repository XML exports."""
+"""Generate PublicnEUro governance JSON and repository aggregate exports."""
 
 from __future__ import annotations
 
@@ -392,6 +392,40 @@ def repository_statistics(records: list[dict], catalogue: Path) -> dict:
     return stats
 
 
+def repository_summary(stats: dict) -> dict:
+    """Return the stable public JSON representation of repository statistics."""
+    size_tb = (stats["sizeGB"] / Decimal("1000")).quantize(Decimal("0.01"))
+    return {
+        "schemaVersion": "1.0",
+        "datasets": stats["datasets"],
+        "versions": stats["versions"],
+        "access": {
+            "open": stats["open"],
+            "restricted": stats["restricted"],
+            "unclassified": stats["unclassified"],
+        },
+        "participants": {
+            "total": stats["participants"],
+            "healthy": stats["healthy"],
+            "patients": stats["patients"],
+            "datasetsWithCounts": stats["participantDatasets"],
+        },
+        "documentedSize": {
+            "terabytes": float(size_tb),
+            "datasetsWithSize": stats["sizeDatasets"],
+        },
+    }
+
+
+def write_repository_summary(stats: dict, output: Path) -> None:
+    """Write website-facing repository totals derived from README statistics."""
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(
+        json.dumps(repository_summary(stats), indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+
 def incremental_catalogue_records(catalogue: Path, output: Path) -> tuple[list[dict], dict]:
     """Refresh records whose stored catalogue source changed; discover new versions."""
     items, super_record = catalogue_index(catalogue)
@@ -582,15 +616,14 @@ def update_readme(readme: Path, records: list[dict], stats: dict) -> None:
     access = f"{stats['open']} open access / {stats['restricted']} restricted"
     if stats["unclassified"]:
         access += f" / {stats['unclassified']} unclassified"
-    size_gb = stats["sizeGB"]
+    size_tb = (stats["sizeGB"] / Decimal("1000")).quantize(Decimal("0.01"))
     summary = (
         f"\n**{stats['datasets']} datasets / {stats['versions']} versions**\n\n"
         f"- **Access:** {access}\n"
         f"- **Participants:** {stats['participants']:,} total "
         f"({stats['healthy']:,} healthy / {stats['patients']:,} patients)\n"
-        f"- **Documented size:** {size_gb:,.2f} GB "
-        f"(≈{size_gb / Decimal('1000'):,.2f} TB; "
-        f"reported for {stats['sizeDatasets']}/{stats['datasets']} datasets)\n\n"
+        f"- **Documented size:** {size_tb:,.2f} TB "
+        f"(reported for {stats['sizeDatasets']}/{stats['datasets']} datasets)\n\n"
         "Figures use the latest version of each dataset. Access is restricted when the "
         "catalogue licence is `Data User Agreement`; participant counts come from the "
         "`Participants` panel; patients are inferred as total minus healthy participants. "
@@ -646,6 +679,7 @@ def main() -> None:
     write_cerif(records, output / "exports" / "openaire-cerif.xml", updated)
     repository = load_json(output / "repository.json")
     write_re3data(repository, len(records), updated, output / "exports" / "re3data.xml")
+    write_repository_summary(stats, output / "exports" / "repository-summary.json")
     update_readme(output / "README.md", records, stats)
     write_manifest(dataset_dir, curation_dir / "manifest.json")
 

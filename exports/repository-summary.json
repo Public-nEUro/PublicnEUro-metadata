@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "datasets": 24,
+  "versions": 25,
+  "access": {
+    "open": 3,
+    "restricted": 21,
+    "unclassified": 0
+  },
+  "participants": {
+    "total": 2130,
+    "healthy": 1731,
+    "patients": 399,
+    "datasetsWithCounts": 23
+  },
+  "documentedSize": {
+    "terabytes": 5.06,
+    "datasetsWithSize": 23
+  }
+}

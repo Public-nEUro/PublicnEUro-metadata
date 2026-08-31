@@ -18,7 +18,7 @@ as `active`.
 
 - **Access:** 3 open access / 21 restricted
 - **Participants:** 2,130 total (1,731 healthy / 399 patients)
-- **Documented size:** 5,058.19 GB (≈5.06 TB; reported for 23/24 datasets)
+- **Documented size:** 5.06 TB (reported for 23/24 datasets)
 
 Figures use the latest version of each dataset. Access is restricted when the catalogue licence is `Data User Agreement`; participant counts come from the `Participants` panel; patients are inferred as total minus healthy participants. Counts are dataset-level and may include the same individuals in related datasets.
 
@@ -54,6 +54,8 @@ Figures use the latest version of each dataset. Access is restricted when the ca
 ## Generated files
 
 - `datasets/PN*.json`: one record per PublicnEUro dataset, with all versions;
+- `exports/repository-summary.json`: compact website-facing totals for datasets,
+  versions, access, participants, and documented size;
 - `exports/openaire-cerif.xml`: dataset products in OpenAIRE CERIF XML 1.2,
   wrapped as an OAI-PMH `ListRecords` response;
 - `exports/re3data.xml`: repository-level metadata in re3data Schema 4.0;
@@ -165,12 +167,14 @@ its current content with `source.sha256`, and regenerates only changed records.
 New datasets and versions are discovered from the catalogue index. Saved
 `curation/PN*.json` patches are reapplied before complete records are written,
 so a full generation can safely re-derive the representation without discarding
-reviewed DUC fields. The README and XML exports are always rebuilt from the
-complete local record set.
+reviewed DUC fields. The README, JSON summary, and XML exports are always
+rebuilt from the complete local record set. The README and
+`exports/repository-summary.json` use the same statistics object, so their
+published totals cannot diverge.
 
 After manually reviewing `duc` or `ducProvenance` in `datasets/PN*.json`, use
-`rebuild.py` to capture the differences under `curation/` and update README/XML
-without replacing the reviewed records. Generation checks
+`rebuild.py` to capture the differences under `curation/` and update the README
+and aggregate exports without replacing the reviewed records. Generation checks
 `curation/manifest.json` and refuses to overwrite uncaptured edits. Catalogue-
 derived fields such as status, retrieval and DOI must instead be corrected in
 DataCatalogue.

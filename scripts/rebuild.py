@@ -16,6 +16,7 @@ if __package__:
         update_readme,
         write_cerif,
         write_re3data,
+        write_repository_summary,
     )
 else:  # Direct execution: python scripts/rebuild.py
     from curation import capture_curation, write_manifest
@@ -27,6 +28,7 @@ else:  # Direct execution: python scripts/rebuild.py
         update_readme,
         write_cerif,
         write_re3data,
+        write_repository_summary,
     )
 
 
@@ -82,6 +84,7 @@ def rebuild(output: Path, catalogue: Path) -> int:
     write_cerif(records, output / "exports" / "openaire-cerif.xml", updated)
     repository = load_json(output / "repository.json")
     write_re3data(repository, len(records), updated, output / "exports" / "re3data.xml")
+    write_repository_summary(stats, output / "exports" / "repository-summary.json")
     update_readme(output / "README.md", records, stats)
     write_manifest(output / "datasets", output / "curation" / "manifest.json")
     return count
@@ -89,7 +92,7 @@ def rebuild(output: Path, catalogue: Path) -> int:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Rebuild README and XML exports from reviewed datasets/PN*.json records"
+        description="Rebuild README and aggregate exports from reviewed datasets/PN*.json records"
     )
     parser.add_argument(
         "--catalogue",
@@ -104,7 +107,7 @@ def main() -> None:
         count = rebuild(args.output.resolve(), args.catalogue.resolve())
     except (OSError, ValueError) as error:
         parser.error(str(error))
-    print(f"Rebuilt README and XML exports from {count} reviewed dataset records")
+    print(f"Rebuilt README and aggregate exports from {count} reviewed dataset records")
 
 
 if __name__ == "__main__":
