@@ -108,7 +108,7 @@
       },
       "ducProvenance": {
         "mappingVersion": "1.0",
-        "mappingStatus": "machine-generated-unreviewed",
+        "mappingStatus": "human-reviewed",
         "sourceAgreement": {
           "type": "Data User Agreement",
           "url": "https://datacatalog.publicneuro.eu/dataset/PN000021%20Serotonine%20transporter%20imaging%20in%20seasonal%20affective%20disorder/V1",

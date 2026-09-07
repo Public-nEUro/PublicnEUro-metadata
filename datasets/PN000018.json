@@ -108,7 +108,7 @@
       },
       "ducProvenance": {
         "mappingVersion": "1.0",
-        "mappingStatus": "machine-generated-unreviewed",
+        "mappingStatus": "human-reviewed",
         "sourceAgreement": {
           "type": "Data User Agreement",
           "url": "https://datacatalog.publicneuro.eu/dataset/PN000018%20Gonadotrophin%20releasing%20hormone%20agonist%20%28GnRHa%29%20sex-hormone%20manipulation%20model%20of%20risk%20for%20depression/V1",

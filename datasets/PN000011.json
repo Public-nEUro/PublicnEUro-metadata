@@ -102,7 +102,7 @@
       },
       "ducProvenance": {
         "mappingVersion": "1.0",
-        "mappingStatus": "machine-generated-unreviewed",
+        "mappingStatus": "human-reviewed",
         "sourceAgreement": {
           "type": "Data User Agreement",
           "url": "https://datacatalog.publicneuro.eu/dataset/PN000011%20A%20dataset%20of%20clinical%20pediatric%20brain%20MRI%20with%20and%20without%20motion%20correction/V1",

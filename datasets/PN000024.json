@@ -108,7 +108,7 @@
       },
       "ducProvenance": {
         "mappingVersion": "1.0",
-        "mappingStatus": "machine-generated-unreviewed",
+        "mappingStatus": "human-reviewed",
         "sourceAgreement": {
           "type": "Data User Agreement",
           "url": "https://datacatalog.publicneuro.eu/dataset/PN000024%20A%20clinical%20brain%20MRI%20dataset%20of%20polymicrogyria%20in%20patients%20suspected%20of%20epilepsy/V1",

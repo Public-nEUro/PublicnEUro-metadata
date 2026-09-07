@@ -108,7 +108,7 @@
       },
       "ducProvenance": {
         "mappingVersion": "1.0",
-        "mappingStatus": "machine-generated-unreviewed",
+        "mappingStatus": "human-reviewed",
         "sourceAgreement": {
           "type": "Data User Agreement",
           "url": "https://datacatalog.publicneuro.eu/dataset/PN000020%20Serotonine%20transporter%20imaging%20in%20MDMA%20or%20hallucinogenic%20drug%20users%20and%20non%20using%20controls/V1",

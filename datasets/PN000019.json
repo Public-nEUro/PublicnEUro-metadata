@@ -108,7 +108,7 @@
       },
       "ducProvenance": {
         "mappingVersion": "1.0",
-        "mappingStatus": "machine-generated-unreviewed",
+        "mappingStatus": "human-reviewed",
         "sourceAgreement": {
           "type": "Data User Agreement",
           "url": "https://datacatalog.publicneuro.eu/dataset/PN000019%20Serotonine%20transporter%20PET%20data%20in%20healthy%20controls%20during%20bright-light%20therapy/V1",
