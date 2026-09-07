@@ -1,0 +1,69 @@
+{
+  "datasetId": "PN000003",
+  "versions": {
+    "V1": {
+      "duc": {
+        "conditions": [
+          {
+            "conditionTerm": {
+              "label": "Regulatory jurisdiction"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Users outside the EU/EEA or an adequate country require Standard Contractual Clauses"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Regulatory compliance"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "User authentication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Re-identification"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Data redistribution"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset"
+          },
+          {
+            "conditionTerm": {
+              "label": "Derived data sharing"
+            },
+            "rule": "Forbidden",
+            "scope": "Whole of asset",
+            "conditionParameter": {
+              "label": "Only group-level outputs from which individual participant information cannot be deduced"
+            }
+          },
+          {
+            "conditionTerm": {
+              "label": "Publication"
+            },
+            "rule": "Obligatory",
+            "scope": "Whole of asset"
+          }
+        ]
+      },
+      "ducProvenance": {
+        "mappingStatus": "human-reviewed"
+      }
+    }
+  }
+}

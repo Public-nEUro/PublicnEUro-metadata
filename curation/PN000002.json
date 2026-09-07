@@ -1,0 +1,10 @@
+{
+  "datasetId": "PN000002",
+  "versions": {
+    "V1": {
+      "ducProvenance": {
+        "mappingStatus": "human-reviewed"
+      }
+    }
+  }
+}
