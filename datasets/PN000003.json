@@ -69,7 +69,7 @@
             "conditionTerm": {
               "label": "Derived data sharing"
             },
-            "rule": "Permitted",
+            "rule": "Forbidden",
             "scope": "Whole of asset",
             "conditionParameter": {
               "label": "Only group-level outputs from which individual participant information cannot be deduced"
@@ -88,7 +88,7 @@
       },
       "ducProvenance": {
         "mappingVersion": "1.0",
-        "mappingStatus": "machine-generated-unreviewed",
+        "mappingStatus": "human-reviewed",
         "sourceAgreement": {
           "type": "Data User Agreement",
           "url": "https://datacatalog.publicneuro.eu/dataset/PN000003%20HCP%20multipipelines/V1",

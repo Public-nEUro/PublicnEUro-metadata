@@ -39,7 +39,7 @@
       },
       "ducProvenance": {
         "mappingVersion": "1.0",
-        "mappingStatus": "machine-generated-unreviewed",
+        "mappingStatus": "human-reviewed",
         "sourceAgreement": {
           "type": "CCBY4.0",
           "url": "https://creativecommons.org/licenses/by/4.0/",
