@@ -6,7 +6,7 @@
     {
       "version": "V1",
       "catalogueUrl": "https://datacatalog.publicneuro.eu/dataset/PN000001%20OpenNeuroPET%20Phantoms/V1",
-      "status": "active",
+      "status": "superseded",
       "retrieval": {
         "mode": "online",
         "url": "https://datacatalog.publicneuro.eu/manage/request-access/PN000001"
@@ -59,8 +59,9 @@
       },
       "source": {
         "path": "metadata/PN000001 OpenNeuroPET Phantoms/V1/ea2/afa20a9d8b1785cf6953488e68f49.json",
-        "sha256": "c23032a2c792405fe1fff43e42b9b8ab7829244e619544221cbbfc0dcdd8b96b"
+        "sha256": "5c0d51ad5238e518b96aaa12f7223118f77aec417c84bcc9cbddf272a0c4e9c2"
       },
+      "replacement": "https://doi.org/10.70883/RGNV3768",
       "doi": "https://doi.org/10.70883/IGQP1334",
       "lastUpdated": "2024-06-02",
       "creators": [

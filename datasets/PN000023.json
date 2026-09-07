@@ -22,7 +22,7 @@
             "assetName": "Familial risk for affective disorders and serotonergic brain architecture",
             "assetURI": "https://datacatalog.publicneuro.eu/dataset/PN000023%20Familial%20risk%20for%20affective%20disorders%20and%20serotonergic%20brain%20architecture/V1",
             "assetReferences": [
-              "https://doi.org/10.70883/NRUJ1547"
+              "https://doi.org/10.70883/NEOT1858"
             ]
           }
         ],
@@ -200,9 +200,9 @@
       },
       "source": {
         "path": "metadata/PN000023 Familial risk for affective disorders and serotonergic brain architecture/V1/828/0bc224e8aa29709efde03958ebb75.json",
-        "sha256": "d237026ab547f97048ab6c66cb113c09ba9052a3383158d9f025fe7fca9fa907"
+        "sha256": "5ddfc67a1c866e3d02213896fe21225454bf801f2f33360b42bdf38b7a89cf26"
       },
-      "doi": "https://doi.org/10.70883/NRUJ1547",
+      "doi": "https://doi.org/10.70883/NEOT1858",
       "lastUpdated": "2026-04-10",
       "creators": [
         {
