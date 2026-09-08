@@ -49,6 +49,11 @@ re3data export:
 python scripts/rebuild.py --catalogue ../DataCatalogue
 ```
 
+Repository-level re3data identifiers are maintained in `repository.json`.
+Both generation workflows call the same `write_re3data` function, so changing
+the assigned re3data record DOI there updates `exports/re3data.xml` during the
+next generation or rebuild.
+
 Before rebuilding aggregate outputs, `rebuild.py` compares the reviewed records
 with a clean catalogue derivation and automatically saves minimal differences
 under `curation/`. It never writes to `datasets/`. Only `duc` and
