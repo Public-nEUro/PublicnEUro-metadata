@@ -2,8 +2,8 @@
 <r3d:re3data xmlns:r3d="http://www.re3data.org/schema/4-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.re3data.org/schema/4-0 https://schema.re3data.org/4-0/re3dataV4-0.xsd">
   <r3d:repository>
     <r3d:identifiers>
-      <r3d:re3data>pending-registration</r3d:re3data>
-      <r3d:doi>not-assigned</r3d:doi>
+      <r3d:re3data>r3d100014932</r3d:re3data>
+      <r3d:doi>https://doi.org/</r3d:doi>
     </r3d:identifiers>
     <r3d:repositoryName language="eng">PublicnEUro</r3d:repositoryName>
     <r3d:repositoryUrl>https://publicneuro.eu/</r3d:repositoryUrl>
@@ -43,7 +43,6 @@
       <r3d:dataUploadRestriction>registration</r3d:dataUploadRestriction>
     </r3d:dataUpload>
     <r3d:versioning>yes</r3d:versioning>
-    <r3d:remarks>Identifiers are placeholders until PublicnEUro is registered in re3data.</r3d:remarks>
     <r3d:entryDate>2024-06-02</r3d:entryDate>
     <r3d:lastUpdate>2026-08-20</r3d:lastUpdate>
   </r3d:repository>

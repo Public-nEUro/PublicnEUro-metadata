@@ -63,9 +63,9 @@ Figures use the latest version of each dataset. Access is restricted when the ca
 
 The re3data export describes PublicnEUro as a repository; re3data is not a
 dataset-level interchange format. The CERIF export contains one Product per
-dataset version. Until PublicnEUro has a re3data registration, the two
-re3data-assigned identifier fields are explicit placeholders; all other fields
-form a schema-valid repository record.
+dataset version. PublicnEUro is registered in re3data as
+[`r3d100014932`](https://www.re3data.org/repository/r3d100014932). The re3data
+record DOI remains pending and can be added to `repository.json` when assigned.
 
 ## Record structure and terminology
 
