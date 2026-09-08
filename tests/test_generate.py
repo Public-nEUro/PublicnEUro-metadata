@@ -2,6 +2,7 @@ import hashlib
 import json
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from decimal import Decimal
 from pathlib import Path
 
@@ -14,10 +15,52 @@ from scripts.generate import (
     repository_statistics,
     retrieval_for,
     source_statistics,
+    write_re3data,
 )
 
 
 class GenerateTests(unittest.TestCase):
+    def test_re3data_export_uses_repository_identifiers(self):
+        repository = {
+            "name": "Example repository",
+            "url": "https://example.org/",
+            "catalogueUrl": "https://example.org/catalogue",
+            "re3dataIdentifiers": {
+                "re3data": "r3d100014932",
+                "doi": "https://doi.org/",
+            },
+            "description": "Example",
+            "repositoryType": "disciplinary",
+            "repositoryLanguage": "eng",
+            "subject": {"scheme": "DFG", "id": "22308", "name": "Neuroscience"},
+            "providerType": "dataProvider",
+            "institution": {
+                "name": "Example institution",
+                "country": "DNK",
+                "responsibility": "general",
+                "type": "non-profit",
+                "url": "https://example.org/",
+            },
+            "metadataLicense": {
+                "name": "MIT License",
+                "url": "https://spdx.org/licenses/MIT.html",
+            },
+            "entryDate": "2024-06-02",
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "re3data.xml"
+            write_re3data(repository, 1, "2026-09-08", output)
+            root = ET.parse(output).getroot()
+            namespace = {"r3d": "http://www.re3data.org/schema/4-0"}
+            self.assertEqual(
+                root.findtext(".//r3d:identifiers/r3d:re3data", namespaces=namespace),
+                "r3d100014932",
+            )
+            self.assertEqual(
+                root.findtext(".//r3d:identifiers/r3d:doi", namespaces=namespace),
+                "https://doi.org/",
+            )
+
     def test_source_reference_is_included(self):
         record = derive_record(
             {
