@@ -13,6 +13,19 @@ The generated records keep three independent facts for every dataset version:
 For backwards compatibility, a catalogue record without `status` is exported
 as `active`.
 
+## Status semantics
+
+| Status | Retrieval mode | Meaning |
+|---|---|---|
+| active | online | PublicnEUro provides the normal dataset access route. |
+| archived | cold_archive | PublicnEUro holds the data in cold storage; retrieval is delayed. |
+| retired | external | PublicnEUro retains metadata but directs requests to the data controller. |
+| withdrawn | unavailable | Data access and contact actions are intentionally unavailable. |
+| superseded | online | The version remains accessible; `replacement` identifies its successor. |
+
+The human-readable Data User Agreement remains authoritative. The `duc`
+object is a structured summary, not a replacement for the agreement.
+
 <!-- DATASET_TABLE_START -->
 **24 datasets / 25 versions**
 
@@ -189,15 +202,3 @@ python -m json.tool datasets/PN000002.json
 To change or add a mapping, edit `mappings/dua_to_duc.json`, increment its
 `mappingVersion`, add a test covering the wording, and regenerate all outputs.
 
-## Status semantics
-
-| Status | Retrieval mode | Meaning |
-|---|---|---|
-| active | online | PublicnEUro provides the normal dataset access route. |
-| archived | cold_archive | PublicnEUro holds the data in cold storage; retrieval is delayed. |
-| retired | external | PublicnEUro retains metadata but directs requests to the data controller. |
-| withdrawn | unavailable | Data access and contact actions are intentionally unavailable. |
-| superseded | online | The version remains accessible; `replacement` identifies its successor. |
-
-The human-readable Data User Agreement remains authoritative. The `duc`
-object is a structured summary, not a replacement for the agreement.
