@@ -27,6 +27,7 @@ The human-readable Data User Agreement remains authoritative. The `duc`
 object is a structured summary, not a replacement for the agreement.
 
 <!-- DATASET_TABLE_START -->
+## Datasets summary
 **24 datasets / 25 versions**
 
 - **Access:** 3 open access / 21 restricted
