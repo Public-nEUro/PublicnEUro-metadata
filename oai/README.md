@@ -12,10 +12,15 @@ registration form for a data repository.
 
 ## Run on a server
 
-The site and metadata GitHub repositories contain static files. GitHub Pages
-cannot execute this Python application. Run it on the server hosting the
-catalogue (or another server with a public HTTPS reverse proxy), and arrange
-for its checkout of this repository to be updated after metadata changes.
+The hostname is a deployment choice. `datacatalog.publicneuro.eu/oai` is used
+in these examples because the catalogue already has a dynamic server. If the
+server or reverse proxy controlling `publicneuro.eu` can route `/oai` to the
+Python process, set `OAI_BASE_URL=https://publicneuro.eu/oai` instead and use
+that as the registration URL. The static GitHub Pages site itself cannot
+execute Python or proxy OAI requests.
+
+Run the service on a server with a public HTTPS reverse proxy, and keep its
+checkout of this metadata repository synchronized with GitHub.
 
 Example with Gunicorn and Nginx; adjust paths, user, port and hostname to the
 actual deployment. Pin a production Gunicorn version in the server's managed
@@ -42,11 +47,27 @@ location = /oai {
 ```
 
 Manage the Gunicorn command with the server's normal process manager; keep it
-bound to localhost. After repository updates, run `git pull --ff-only` in the
-server checkout. Record files are read for each request, so no restart is
-needed after an update. The service must remain reachable without a login.
-An alternative hostname is fine if `OAI_BASE_URL` exactly matches its public
-HTTPS URL.
+bound to localhost. The service must remain reachable without a login.
+
+### Keep records current
+
+Commit generated and reviewed `datasets/PN*.json` records to the metadata
+repository's `main` branch. Configure the server's existing GitHub deployment
+hook to pull this repository too, or use a periodic sync under the same
+non-root account that owns the checkout. For example, this crontab entry
+checks for changes every five minutes:
+
+```cron
+*/5 * * * * /usr/bin/git -C /srv/publicneuro-metadata pull --ff-only origin main >> /var/log/publicneuro-oai-sync.log 2>&1
+```
+
+Choose a writable log location for that account. Monitor failed pulls; keep
+the server checkout free of local edits so `--ff-only` succeeds. The service
+reads the dataset JSON files on every request. Once the pull completes, new
+datasets and edits are served without restarting Gunicorn, subject to
+OpenAIRE's own harvesting schedule. A push to `DataCatalogue` alone does not
+change these records: run the metadata repository's generation or incremental
+update workflow, review, and commit its resulting JSON files first.
 
 ## Validate before registering
 
@@ -58,9 +79,10 @@ curl -fsS 'https://datacatalog.publicneuro.eu/oai?verb=ListRecords&metadataPrefi
 curl -fsS 'https://datacatalog.publicneuro.eu/oai?verb=ListIdentifiers&metadataPrefix=oai_datacite&from=2026-01-01'
 ```
 
-Only after those URLs work publicly, enter
-`https://datacatalog.publicneuro.eu/oai` as the **base URL** (without
-`?verb=...`) in OpenAIRE. A GitHub `blob`/`raw` URL cannot be a base URL.
+Only after those URLs work publicly, enter the deployed URL as the **base
+URL** (without `?verb=...`) in OpenAIRE. For a root-domain deployment, replace
+`https://datacatalog.publicneuro.eu/oai` throughout with
+`https://publicneuro.eu/oai`. A GitHub `blob`/`raw` URL cannot be a base URL.
 
 OAI datestamps use the later of the source record's `lastUpdated` and its Git
 commit date. This ensures manually curated changes are available to incremental
