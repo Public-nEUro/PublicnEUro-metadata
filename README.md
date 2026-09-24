@@ -74,6 +74,10 @@ Figures use the latest version of each dataset. Access is restricted when the ca
 - `exports/re3data.xml`: repository-level metadata in re3data Schema 4.0;
 - `schema/dataset.schema.json`: JSON Schema for the dataset records.
 
+The live OAI-PMH interface for OpenAIRE data-archive harvesting is implemented
+in [`oai/`](oai/README.md). Its service requires an HTTPS host with Python;
+the static XML export is not an OAI-PMH endpoint.
+
 The re3data export describes PublicnEUro as a repository; re3data is not a
 dataset-level interchange format. The CERIF export contains one Product per
 dataset version. PublicnEUro is registered in re3data as
@@ -201,4 +205,3 @@ python -m json.tool datasets/PN000002.json
 
 To change or add a mapping, edit `mappings/dua_to_duc.json`, increment its
 `mappingVersion`, add a test covering the wording, and regenerate all outputs.
-
