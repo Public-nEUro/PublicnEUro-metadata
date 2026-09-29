@@ -31,7 +31,7 @@ object is a structured summary, not a replacement for the agreement.
 
 - **Access:** 3 open access / 21 restricted
 - **Participants:** 2,130 total (1,731 healthy / 399 patients)
-- **Documented size:** 5.06 TB (reported for 23/24 datasets)
+- **Documented size:** 5.07 TB (reported for 24/24 datasets)
 
 Figures use the latest version of each dataset. Access is restricted when the catalogue licence is `Data User Agreement`; participant counts come from the `Participants` panel; patients are inferred as total minus healthy participants. Counts are dataset-level and may include the same individuals in related datasets.
 
