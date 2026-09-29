@@ -200,7 +200,7 @@
       },
       "source": {
         "path": "metadata/PN000018 Gonadotrophin releasing hormone agonist (GnRHa) sex-hormone manipulation model of risk for depression/V1/097/c427ea08f28710911289ee71ced75.json",
-        "sha256": "25c418ef2afd6319d56397b06aedaa38647b72d28b9f5f6cb1c4700b424270e1"
+        "sha256": "4752c327575cdd2c519cf417639f4277595ce306efd3e566e028b6659feab05b"
       },
       "doi": "https://doi.org/10.70883/MYCX5689",
       "lastUpdated": "2026-04-10",
@@ -217,6 +217,12 @@
           "givenName": "Gitte",
           "familyName": "M. Knudsen"
         }
+      ],
+      "keywords": [
+        "DASB",
+        "PET",
+        "serotonin",
+        "Gonadotrophin"
       ]
     }
   ]
